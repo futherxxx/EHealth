@@ -1,0 +1,215 @@
+﻿@using DocApp.Classes;
+
+@{
+    ViewBag.Title = "UserPage";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+
+    
+    
+}
+
+@{if (Allstatic.Usersuccessbook != null) { 
+
+   <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> @Allstatic.Usersuccessbook.
+  </div>
+}
+    
+    Allstatic.Usersuccessbook = null;
+}
+
+@{if (Allstatic.Userregistration != null)
+
+  { <div class="alert alert-success alert-dismissible">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Success!</strong> @Allstatic.Userregistration.
+    </div>
+    
+  }
+    
+    Allstatic.Userregistration = null;
+
+}
+
+@{if (Allstatic.Userlogin != null)
+{ <div class="alert alert-success alert-dismissible">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Success!</strong> @Allstatic.Userlogin.
+    </div>
+
+}
+
+  Allstatic.Userlogin = null;
+
+}
+
+
+<div style="border-bottom-width: thin; border-bottom-style: solid; border-bottom-color: #999999;"><h2>Diagnosis</h2></div>
+
+<p><h3>Enter Illness Symptoms</h3></p>
+
+        <form id="form1" name="form1" method="post" action="">
+
+            <div style="float: left; width: 160px;  margin: 5px"> <input name="sympone" type="text" id="sympone" placeholder="Enter Symptom" style="height: 30px; border: thin solid #993300;" /></div>
+            <div style="float: left; width: 160px; margin: 5px"> <input name="sympone1" type="text" id="sympone1" placeholder="Enter Symptom" style="height: 30px; border: thin solid #993300;" /></div>
+            <div style="float: left; width: 160px; margin: 5px"> <input name="sympone2" type="text" id="sympone2" placeholder="Enter Symptom" style="height: 30px; border: thin solid #993300;" /></div>
+            <div style="float: left; width: 160px; margin: 5px"> <input name="sympone3" type="text" id="sympone3" placeholder="Enter Symptom" style="height: 30px; border: thin solid #993300;" /></div>
+            <div style="float: left; width: 160px; margin: 5px"> <input name="sympone4" type="text" id="sympone4" placeholder="Enter Symptom" style="height: 30px; border: thin solid #993300;" /></div>
+
+            <div style="clear:both;"></div>
+            <div><input name="Submit" type="submit" value="Search" style="width:100px;height:30px;margin:10px" /></div>
+
+        </form>
+    
+        <p> @if (ViewBag.data != null){ <h3 style="color:red">@ViewBag.data </h3>} </p>
+
+        <p>     
+           
+        @if (@ViewBag.remedies != null)
+          {
+    <div style="border-bottom-width: thin; border-bottom-style: solid; border-bottom-color: #999999;"><h3>Possible Ailments</h3></div>
+
+           <div class="table-responsive">
+             <table width="100%" border="0" align="center">
+
+
+                <tr>
+                    <td width="33%" height="20" align="left" valign="top">
+                        <h4 style="font-weight:bold;color:red">Ailment Name</h4> 
+                    </td>
+                    <td width="33%" align="left" valign="middle">
+                        <h4 style="font-weight:bold;color:red">Symtoms</h4>
+                       
+                    </td>
+                    <td width="33%" align="center" valign="top">
+                       
+                        <h4 style="font-weight:bold;color:red">&nbsp;</h4>
+                    </td>
+
+                </tr>
+
+                
+
+                @for (int i = 0; i < ViewBag.remedies.Length; i++)//foreach (var item in ViewBag.remedies)
+                {
+
+                <tr>
+                    <td width="33%" height="20" align="left" valign="top">
+                        <h3> - @ViewBag.remedies[i].Remedy</h3>
+                    </td>
+                    <td width="33%" align="left" valign="middle">
+                        
+                             <h5>@ViewBag.remsymptoms[i]</h5>
+
+                    </td>
+                    <td width="33%" align="center" valign="top">
+                        <h4><a href="~/Home/ShowAillment?showdoc=@ViewBag.remedies[i].id">View Details </a></h4>
+                     </td>
+                    
+                   
+                </tr> 
+                }
+
+
+            </table>   
+          </div>   
+            
+            
+            
+        }
+
+ 
+        </p>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+	
+        $("#sympone").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: "/Home/Allsymptoms",
+                    type: "POST",
+                    dataType: "json",
+                    data: { prefix: request.term },
+                    success: function (data) {
+                        response($.map(data, function (item) {
+                            return { label: item.symptom, value: item.symptom };
+                        }))
+                    }
+                })
+            },
+        });
+
+
+        $("#sympone1").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: "/Home/Allsymptoms",
+                    type: "POST",
+                    dataType: "json",
+                    data: { prefix: request.term },
+                    success: function (data) {
+                        response($.map(data, function (item) {
+                            return { label: item.symptom, value: item.symptom };
+                        }))
+                    }
+                })
+            },
+        });
+
+        $("#sympone2").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: "/Home/Allsymptoms",
+                    type: "POST",
+                    dataType: "json",
+                    data: { prefix: request.term },
+                    success: function (data) {
+                        response($.map(data, function (item) {
+                            return { label: item.symptom, value: item.symptom };
+                        }))
+                    }
+                })
+            },
+        });
+
+        $("#sympone3").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: "/Home/Allsymptoms",
+                    type: "POST",
+                    dataType: "json",
+                    data: { prefix: request.term },
+                    success: function (data) {
+                        response($.map(data, function (item) {
+                            return { label: item.symptom, value: item.symptom };
+                        }))
+                    }
+                })
+            },
+        });
+
+        $("#sympone4").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: "/Home/Allsymptoms",
+                    type: "POST",
+                    dataType: "json",
+                    data: { prefix: request.term },
+                    success: function (data) {
+                        response($.map(data, function (item) {
+                            return { label: item.symptom, value: item.symptom };
+                        }))
+                    }
+                })
+            },
+        });
+
+
+    })
+</script>  
+
+

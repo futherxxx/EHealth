@@ -1,0 +1,63 @@
+﻿@model DocApp.Models.RemedyTable
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layoutadmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>RemedyTable</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Remedy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Remedy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Definition)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Definition)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date)
+        </dd>
+
+      
+
+       
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Causes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Causes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prevention)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prevention)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

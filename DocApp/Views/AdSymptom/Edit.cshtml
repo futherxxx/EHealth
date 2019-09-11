@@ -1,0 +1,81 @@
+﻿@using DocApp.Models;
+
+@model DocApp.Models.symptomtable
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layoutadmin.cshtml";
+
+    List<RemedyTable> cat = (List<RemedyTable>)ViewBag.cat;
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Edit symptom</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.id)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.symptom, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.symptom)
+                @Html.ValidationMessageFor(model => model.symptom)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.remedy, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <select class="form-control" id="state" name="remedy" style="width:30%">
+                    <option selected="selected" value="@ViewBag.catname.id">
+                        @ViewBag.catname.Remedy
+                    </option>
+                    @{
+    if (cat.Count() != 0)
+    {
+        foreach (var item in cat)
+        {
+
+            <option value="@item.id">@item.Remedy</option>
+
+        }
+
+
+    }
+
+
+                    }
+
+                </select>
+
+
+
+
+
+
+
+
+
+
+
+                @Html.ValidationMessageFor(model => model.remedy)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

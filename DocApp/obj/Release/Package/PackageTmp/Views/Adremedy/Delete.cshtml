@@ -1,0 +1,73 @@
+﻿@model DocApp.Models.RemedyTable
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layoutadmin.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>RemedyTable</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Remedy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Remedy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Definition)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Definition)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cattype)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cattype)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Causes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Causes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prevention)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prevention)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,146 @@
+﻿@{
+    ViewBag.Title = "ShowAillment";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<style>
+
+    .carbac {
+        background-color: darkslateblue;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        color: #ffffff;
+    }
+
+</style>
+
+
+<div style="border-bottom-width: thin; border-bottom-style: solid; border-bottom-color: #999999;"><h2>Ailment Details</h2></div>
+
+
+   
+<div>
+   
+   
+
+        @if (@ViewBag.ailment != null)
+        {
+            <div style="border-bottom-width: thin; border-bottom-style: solid; border-bottom-color: #999999;"><h3>@ViewBag.ailment.Remedy
+                
+              <span style="float: right;margin-bottom:20px;"> <a href="~/Home/UserPage" class="btn btn-success" onclick="goBack()"> Back to Ailments</a></span>
+                
+                </h3>
+
+
+            </div>
+
+       <table width="100%" border="0" align="center" >
+       
+        <tr>
+            <td width="83%" align="left" valign="top" style="padding:10px">
+
+                <div class="panel-group" id="accordion">
+
+                    <div class="panel panel-default">
+
+                        <div class="carbac">
+                            <div class="panel-heading"></div>
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                    Definition
+                                </a>
+                            </h4>
+                        </div>
+
+                        <div id="collapseOne" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                @ViewBag.ailment.Definition
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                    Causes
+                                </a>
+                            </h4>
+                        </div>
+
+                        <div id="collapseTwo" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                @ViewBag.ailment.Causes
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                    Symptoms
+                                </a>
+                            </h4>
+                        </div>
+
+                        <div id="collapseThree" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                @foreach (var item in ViewBag.symptoms)
+                                {
+
+                                    <span> @item, </span>
+                                }
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapsefour">
+                                    Prevention
+                                </a>
+                            </h4>
+                        </div>
+
+                        <div id="collapsefour" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                @ViewBag.ailment.Prevention
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </td>
+
+            <td width="17%" align="center" valign="top" style="padding:10px"><h4><a href="~/Home/ShowDoclist?showdoc=@ViewBag.ailment.id&ailment=@ViewBag.ailment.Remedy">Consult Doctor</a></h4></td>
+        </tr>
+
+
+    </table>
+
+
+
+        }
+
+
+
+
+</div>
+    
+
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
+
+

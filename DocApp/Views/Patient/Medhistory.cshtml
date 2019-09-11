@@ -1,0 +1,72 @@
+﻿@using DocApp.Models;
+
+@{
+    ViewBag.Title = "Medhistory";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+
+    List<Medhistory> medhistory = (List<Medhistory>)ViewBag.medrecord;
+}
+
+<div style="border-bottom-width: thin; border-bottom-style: solid; border-bottom-color: #999999;">
+<h2>
+    Medical History</h2>
+
+</div>
+
+<div>
+        @{
+            if (medhistory.Count() == 0)
+            {
+                <h3>No medical record available for this Patient</h3>
+
+            }
+            else
+            {
+                foreach (var item in medhistory)
+                {
+
+                <p>
+                    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td height="30" colspan="2" align="left" valign="top"><span style="font-weight:bold">Treated For: </span><span style="font-weight:bold; color:green">@item.ailment</span></td>
+                        </tr>
+                        <tr>
+                            <td width="100%" height="28" align="left" valign="top"><span style="font-weight:bold">Prescription: </span>@item.treatment </td>
+                        </tr>
+                        <tr>
+                            <td height="28" align="left" valign="top"><span style="font-weight:bold">Test Done: </span> @item.test</td>
+                        </tr>
+                        <tr>
+                            <td height="28" align="left" valign="top"><span style="font-weight:bold">Drugs Prescribed: </span> @item.testresult</td>
+                        </tr>
+                        <tr>
+                            <td height="28" align="left" valign="top"><span style="font-weight:bold">Any recommendation: </span> @item.recommendation</td>
+                        </tr>
+                        <tr>
+                            <td height="28" align="left" valign="top"><span style="font-weight:bold">Doctor Name: </span> @item.docname</td>
+                        </tr>
+                        <tr>
+                            <td height="28" align="left" valign="top"><span style="font-weight:bold">Doc. Hospital: </span> @item.hospital</td>
+                        </tr>
+                        <tr>
+                            <td height="28" align="left" valign="top"><span style="font-weight:bold">Date: </span>@String.Format("{0:dd/MM/yyyy}", item.date)</td>
+                        </tr>
+
+
+                        <tr>
+                            <td height="10" colspan="2" align="left" valign="middle" style="border-bottom-width: thin; border-bottom-style: solid; border-bottom-color: #999999;">&nbsp;</td>
+                        </tr>
+                    </table>
+                </p>
+
+
+                }
+
+
+            }
+
+
+
+        }
+       
+    </div>

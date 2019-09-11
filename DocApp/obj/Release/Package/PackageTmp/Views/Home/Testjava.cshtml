@@ -1,0 +1,118 @@
+﻿
+@{
+    ViewBag.Title = "Testjava";
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Datepicker - Default functionality</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="~/Content/jquery-ui-timepicker-addon.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="~/Content/jquery-ui-timepicker-addon.js"></script>
+
+    <script>
+     
+        $(function () {
+
+          
+            $("#datepicker").timepicker();
+
+           
+            var box = $("#box2");
+
+            var box1 = $("#box3");
+
+            box.click(function () {
+
+                alert("hello to u");
+
+                //box1.hide();
+
+                box1.toggle();
+
+            });
+
+
+            /*
+            
+             $(".test").hide();
+            
+            box.fadeOut("slow");
+            var div = $("div");
+            div.fadeOut();
+            div.css("color", "red");
+            div.text("hello world");   -- set text
+    
+            div.text(); ---- get text
+    
+             $("#test").val();   -- form  values
+            
+            $("div").css({
+            "background" : "red",
+            "margin-left": "200px",
+            "color": "black"
+            });
+            
+            $("div").addClass("column");
+    
+            */
+           // console.log(date, " ", time);
+        });
+    </script>
+</head>
+<body>
+    <p>Date: <input type="text" id="datepicker"></p>
+
+
+    <table width="1000" border="0" align="center" class="sinboxcontent">
+        <tr>
+            <td align="left" valign="top">
+                <h2>Enter Announcements</h2>
+               
+            </td>
+        </tr>
+        <tr>
+            <td align="left" valign="top">
+
+                <form id="form1" name="form1" method="post" action="">
+                    <p>Header:</p>
+                    <p>
+                        <label>
+                            <input name="header" type="text" id="header" size="100" />
+                        </label>
+                    </p>
+                    <p>Body:</p>
+                    <p>
+
+
+                        <div class="imageclass2"><textarea name="bcontent" id="bcontent"></textarea></div>
+
+                    </p>
+                    <p>
+                        <label>
+                            <input type="submit" name="Submit" value="Submit" />
+                        </label>
+                    </p>
+                    <p>&nbsp;</p>
+                </form>
+            </td>
+        </tr>
+    </table>
+
+
+
+    <script src="../../Scripts/tinymce/tinymce.js"></script>
+
+
+    <script src="../../Scripts/main1.js"></script>
+
+
+</body>
+</html>

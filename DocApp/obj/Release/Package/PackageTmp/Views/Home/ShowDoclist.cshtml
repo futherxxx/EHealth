@@ -1,0 +1,49 @@
+﻿@using DocApp.Models;
+
+@{
+    ViewBag.Title = "ShowDoclist";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<h2>Book a Doctor</h2>
+
+
+
+<p>
+
+    @if (ViewBag.Alldocs != null)
+    {
+        <div style="border-bottom-width: thin; border-bottom-style: solid; border-bottom-color: #999999;"><h3>Available Doctors</h3></div>
+
+         <table width="100%" border="0" align="left" cellpadding="0" cellspacing="0">
+         <tr>
+
+             <td width="22%" height="24" align="left" valign="top"><h4 style="font-weight:bold;color:red">Doctor Name</h4></td>
+             <td width="23%" align="left" valign="top"><h4 style="font-weight:bold;color:red">Specialty</h4></td>
+             <td width="19%" align="left" valign="top"><h4 style="font-weight:bold;color:red">Hospital</h4></td>
+             <td width="17%" align="left" valign="top"><h4 style="font-weight:bold;color:red">Book Doctor </h4></td>
+        </tr>
+
+
+            @foreach (var item in (ViewBag.Alldocs as IEnumerable<DocRegistraton>))
+            {
+
+                <tr>
+                    <td height="28" align="left" valign="middle">@item.docname</td>
+                    <td align="left" valign="middle">@item.Specialty</td>
+                    <td align="left" valign="middle">@item.hospital</td>
+                    <td align="left" valign="middle"><h4><a href="~/Patient/Bookdoctor?docid=@item.id&bookboc=bookdoc">Book Doctor</a></h4></td>
+                </tr>
+            }
+
+
+        </table>
+
+
+
+    }
+
+
+</p>
+
+

@@ -1,0 +1,43 @@
+﻿@model DocApp.Models.FrontPage
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layoutadmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FrontPage</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.header)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.header)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.textbody)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.textbody)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.contact)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.contact)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

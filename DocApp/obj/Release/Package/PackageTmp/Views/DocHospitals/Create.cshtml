@@ -1,0 +1,93 @@
+﻿@model DocApp.Models.DocHospital
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layoutadmin.cshtml";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Enter New Hospitals</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Hospitalname, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Hospitalname, new { @class = "form-control", required="required"})
+                @Html.ValidationMessageFor(model => model.Hospitalname)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Hospitaladdress, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <textarea class="form-control" rows="1" id="Hospitaladdress" name="Hospitaladdress" required></textarea>
+                
+                @Html.ValidationMessageFor(model => model.Hospitaladdress)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.State, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <select class="form-control" id="state" name="state">
+
+                    @{
+                        if (ViewBag.states != null)
+                        {
+                            foreach (var item in ViewBag.states)
+                            {
+
+                                <option value="@item">@item</option>
+
+                            }
+
+
+                        }
+
+
+                    }
+
+                </select>
+
+
+
+                @Html.ValidationMessageFor(model => model.State)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Otherinfo, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <textarea class="form-control" rows="1" id="address" name="Otherinfo" ></textarea>
+                @Html.ValidationMessageFor(model => model.Otherinfo)
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.mobile, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="number" class="form-control" id="pwd" name="mobile" 
+                       style="width: 90%; float: left; " required>
+                @Html.ValidationMessageFor(model => model.mobile)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

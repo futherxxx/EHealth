@@ -1,0 +1,139 @@
+﻿@using DocApp.Classes;
+@using System.Globalization;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - DocAPP</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+   
+    <link rel="stylesheet" href="~/Scripts/jquery-uiv1.11.4.css">
+    <link rel="stylesheet" href="~/Scripts/bootstrap.min-cus.css">
+    <link rel="stylesheet" href="~/Content/custom.css">
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/bootstrap.min-cus.js"></script>
+    <script src="~/Scripts/jquery-ui1.11.4.js"></script>
+
+ 
+</head>
+<body>
+
+    <div class="dcenter">
+        <div>
+            <img src="~/Images/docimage.jpg" />
+        </div>
+
+
+        <div class="col-container">
+            <div class="container-fluid col">
+
+                <div>
+                
+                    @{if (Allstatic.UserDetails.username != null)
+                    {
+                        
+
+                       <div class="row">
+
+                          @if (Allstatic.UserDetails.surname != null)
+                          {
+                              string dname = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(Allstatic.UserDetails.firstname + " " + Allstatic.UserDetails.surname);
+                              
+                               <div class="col-sm-10" style="font-family:Andalus;font-size:18px">
+                             Welcome:<span style="color:red"> @dname </span>
+                            </div>
+                            
+                        }
+                          else
+                          {
+                              <div class="col-sm-10" style="font-family:Andalus;font-size:18px">
+                                   Welcome: <span style="color:red">User, Please update your Profile to enable you use all Services</span>
+                            </div>
+                              
+                              
+                          }
+                           
+                         
+                           <div class="col-sm-2" style="text-align:center;padding:5px;">
+                               <a href="~/home/logout" class="btn btn-danger btn-md" role="button">Logout</a>
+                           </div>
+                    </div>
+                    }
+                      else
+                      {
+                          
+                          
+                          
+                      }
+                   
+                    }
+
+                   
+
+                        <div class="row">
+                            <div class="col-sm-10">
+                                @RenderBody()
+                            </div>
+
+                            <div class="col-sm-2 col" style="padding: 5px;">
+                                <p>&nbsp;</p>
+                                <div style="background-color: #EBE7F0">
+                                    <nav>
+                                        <ul class=" nav">                    
+                                            <li>
+                                                <h4>
+                                                    <a href="#" id="btn-1" data-toggle="collapse" data-target="#submenu1" aria-expanded="false">Profile</a>
+                                                </h4>
+                                                    <ul class="nav collapse nav1" id="submenu1" role="menu" aria-labelledby="btn-1">
+                                                        <li><h4><a href="~/Patient">Edit Profile</a></h4></li>
+                                                    </ul>
+                                             </li>
+                                            <li><h4><a href="~/Home/UserPage">Diagnosis</a></h4></li>
+                                            <li><h4>
+                                                        <a href="#" id="btn-2" data-toggle="collapse" data-target="#submenu2" aria-expanded="false">Book Appointment</a>
+                                                    </h4>
+                                                <ul class="nav collapse nav1" id="submenu2" role="menu" aria-labelledby="btn-2">
+                                                    <li><h4><a href="~/Booking/Booktype">Book Doctor</a></h4></li>
+                                                    <li><h4><a href="~/Patient/allbooking">Appointment History</a></h4></li>
+
+                                                </ul>
+                                            
+                                            
+                                            </li>
+                                            
+                                            <li><h4><a href="~/patient/medhistory">Medical Record</a></h4></li>
+                                        </ul>
+                                    </nav>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+            </div>
+        </div>
+
+        </div>
+        
+    
+    <footer>
+        <div class="footer">
+
+
+            <div class="container footer1"><p><h6>&copy; @DateTime.Now.Year - DOC App</h6></p></div>
+
+
+        </div>
+
+
+    </footer>
+
+
+</body>
+</html>

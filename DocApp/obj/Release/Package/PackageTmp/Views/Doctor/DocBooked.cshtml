@@ -1,0 +1,62 @@
+﻿@model IEnumerable<DocApp.Models.UserAppoint>
+
+
+@{
+    ViewBag.Title = "DocPending";
+    Layout = "~/Views/Shared/_LayoutDoc.cshtml";
+
+
+}
+
+
+
+
+
+<h2>Booked Appointments</h2>
+
+@{if (ViewBag.error != null)
+{ <div class="alert alert-danger alert-dismissible">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong> @ViewBag.error.</strong>
+    </div>
+
+}
+
+else
+{
+    <div>
+
+        <p style="border-bottom-width: thin; border-bottom-style: solid; border-bottom-color: palevioletred;">All pending treatments</p>
+
+        @foreach (var item in Model)
+        {
+            <p>
+                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td height="30" colspan="2" align="left" valign="top"><span style="font-weight:bold">Ailment: </span><span style="font-weight:bold; color:green;font-size:18px">@item.ailment </span></td>
+                    </tr>
+                    <tr>
+                        <td width="50%" height="28" align="left" valign="top"><span style="font-weight:bold">Patient Name: </span> @item.username </td>
+                        <td width="50%" align="left" valign="top">&nbsp; </td>
+                    </tr>
+                    <tr>
+                        <td height="28" align="left" valign="top">
+                            <span style="font-weight:bold">Booking Date/Time: </span>
+                            @String.Format("{0:dd/MM/yyyy}", item.dateofappoint) &nbsp; @item.timeofvisit
+                        </td>
+                        <td align="left" valign="top"><h4><a href="~/doctor/allpending?id=@item.id">View in Detail</a></h4></td>
+                    </tr>
+                    <tr>
+                        <td height="10" colspan="2" align="left" valign="middle" style="border-bottom-width: thin; border-bottom-style: solid; border-bottom-color: #999999;">&nbsp;</td>
+                    </tr>
+                </table>
+            </p>
+        }
+    </div>
+
+}
+}
+
+
+
+

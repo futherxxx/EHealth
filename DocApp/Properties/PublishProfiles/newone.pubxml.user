@@ -1,0 +1,517 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\Therapy\Desktop\sas</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>08/23/2018 13:14:35</publishTime>
+    </File>
+    <File Include="bin/DocApp.dll">
+      <publishTime>10/03/2018 18:31:46</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>08/23/2018 13:14:46</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>08/23/2018 13:14:46</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>08/23/2018 13:14:53</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
+      <publishTime>08/23/2018 13:14:54</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
+      <publishTime>08/23/2018 13:14:54</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>08/23/2018 13:14:54</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>08/23/2018 13:14:55</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
+      <publishTime>08/23/2018 13:14:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>08/23/2018 13:14:55</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Facebook.dll">
+      <publishTime>08/23/2018 13:14:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Google.dll">
+      <publishTime>08/23/2018 13:14:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.MicrosoftAccount.dll">
+      <publishTime>08/23/2018 13:14:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>08/23/2018 13:14:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Twitter.dll">
+      <publishTime>08/23/2018 13:14:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>08/23/2018 13:14:29</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>08/23/2018 13:14:34</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>08/23/2018 13:14:54</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>08/23/2018 13:14:27</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>08/23/2018 13:14:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>08/23/2018 13:14:26</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>08/23/2018 13:14:26</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>08/23/2018 13:14:27</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>08/23/2018 13:14:28</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>08/23/2018 13:14:28</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>08/23/2018 13:14:36</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>08/23/2018 13:14:15</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>08/23/2018 13:14:15</publishTime>
+    </File>
+    <File Include="Content/custom.css">
+      <publishTime>10/03/2018 12:56:51</publishTime>
+    </File>
+    <File Include="Content/custom1.css">
+      <publishTime>08/31/2018 16:40:50</publishTime>
+    </File>
+    <File Include="Content/customenu.css">
+      <publishTime>08/17/2017 10:21:14</publishTime>
+    </File>
+    <File Include="Content/customfront.css">
+      <publishTime>10/03/2018 11:47:38</publishTime>
+    </File>
+    <File Include="Content/jquery-ui-timepicker-addon.css">
+      <publishTime>09/30/2018 19:09:39</publishTime>
+    </File>
+    <File Include="Content/jquery-ui-timepicker-addon.js">
+      <publishTime>09/30/2018 19:09:28</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>08/23/2018 13:14:43</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>06/28/2018 11:56:30</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>08/23/2018 13:14:15</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>08/23/2018 13:14:15</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>08/23/2018 13:14:15</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>08/23/2018 13:14:15</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>08/23/2018 13:14:09</publishTime>
+    </File>
+    <File Include="Images/bacimage.jpg">
+      <publishTime>08/25/2018 18:49:21</publishTime>
+    </File>
+    <File Include="Images/docimage.jpg">
+      <publishTime>10/03/2018 10:51:46</publishTime>
+    </File>
+    <File Include="Images/ehealth.png">
+      <publishTime>10/03/2018 10:56:17</publishTime>
+    </File>
+    <File Include="Images/image1.jpg">
+      <publishTime>10/03/2018 11:09:05</publishTime>
+    </File>
+    <File Include="Images/image2.jpg">
+      <publishTime>09/13/2018 09:07:52</publishTime>
+    </File>
+    <File Include="Images/image3.jpg">
+      <publishTime>09/13/2018 09:07:10</publishTime>
+    </File>
+    <File Include="Images/image4.jpg">
+      <publishTime>07/31/2017 16:44:15</publishTime>
+    </File>
+    <File Include="Images/image5.jpg">
+      <publishTime>07/31/2017 16:40:50</publishTime>
+    </File>
+    <File Include="Images/images/cartimage.jpg">
+      <publishTime>09/05/2017 12:39:52</publishTime>
+    </File>
+    <File Include="Images/images/facebook.jpg">
+      <publishTime>08/19/2017 07:39:00</publishTime>
+    </File>
+    <File Include="Images/images/order.jpg">
+      <publishTime>08/18/2017 14:40:02</publishTime>
+    </File>
+    <File Include="Images/images/seller.jpg">
+      <publishTime>08/18/2017 14:39:18</publishTime>
+    </File>
+    <File Include="Images/images/shopfarm.jpg">
+      <publishTime>08/18/2017 14:17:30</publishTime>
+    </File>
+    <File Include="Images/images/trans.jpg">
+      <publishTime>08/18/2017 14:39:44</publishTime>
+    </File>
+    <File Include="Images/images/twitter.jpg">
+      <publishTime>08/19/2017 07:39:19</publishTime>
+    </File>
+    <File Include="Images/side1.jpg">
+      <publishTime>09/12/2018 17:31:06</publishTime>
+    </File>
+    <File Include="Images/side2.jpg">
+      <publishTime>09/12/2018 17:30:01</publishTime>
+    </File>
+    <File Include="Images/side3.jpg">
+      <publishTime>09/12/2018 17:32:57</publishTime>
+    </File>
+    <File Include="Images/side4.jpg">
+      <publishTime>09/13/2018 09:43:32</publishTime>
+    </File>
+    <File Include="Images/states.json">
+      <publishTime>08/28/2018 18:19:46</publishTime>
+    </File>
+    <File Include="Models/DocModel.edmx.diagram">
+      <publishTime>10/03/2018 13:05:46</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>08/23/2018 13:14:57</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>08/23/2018 13:14:15</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min-cus.css">
+      <publishTime>08/29/2018 11:59:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min-cus.js">
+      <publishTime>06/26/2018 12:10:52</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min-cus2.css">
+      <publishTime>08/29/2018 12:12:17</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>08/23/2018 13:14:15</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>08/24/2018 12:10:31</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>08/23/2018 13:14:16</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>08/23/2018 13:14:16</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui1.11.4.js">
+      <publishTime>08/24/2018 12:00:53</publishTime>
+    </File>
+    <File Include="Scripts/jquery-uiv1.11.4.css">
+      <publishTime>08/24/2018 12:02:27</publishTime>
+    </File>
+    <File Include="Scripts/jquery.min-cus.js">
+      <publishTime>06/26/2018 13:07:09</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>08/23/2018 13:14:57</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>08/23/2018 13:14:57</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>08/23/2018 13:14:57</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>08/23/2018 13:14:57</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>08/23/2018 13:14:31</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>08/23/2018 13:14:36</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>08/23/2018 13:14:36</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>10/03/2018 10:13:04</publishTime>
+    </File>
+    <File Include="Uploads/117871black-woman-doctor-smiling-in-office_vyokq1zwl__F0000.png">
+      <publishTime>09/06/2018 15:43:00</publishTime>
+    </File>
+    <File Include="Uploads/1619793hotel-balcony.JPG">
+      <publishTime>09/07/2018 13:17:06</publishTime>
+    </File>
+    <File Include="Views/Account/ExternalLoginConfirmation.cshtml">
+      <publishTime>08/23/2018 13:14:44</publishTime>
+    </File>
+    <File Include="Views/Account/ExternalLoginFailure.cshtml">
+      <publishTime>08/23/2018 13:14:44</publishTime>
+    </File>
+    <File Include="Views/Account/Login.cshtml">
+      <publishTime>08/23/2018 13:14:44</publishTime>
+    </File>
+    <File Include="Views/Account/Manage.cshtml">
+      <publishTime>08/23/2018 13:14:44</publishTime>
+    </File>
+    <File Include="Views/Account/Register.cshtml">
+      <publishTime>08/23/2018 13:14:44</publishTime>
+    </File>
+    <File Include="Views/Account/_ChangePasswordPartial.cshtml">
+      <publishTime>08/23/2018 13:14:44</publishTime>
+    </File>
+    <File Include="Views/Account/_ExternalLoginsListPartial.cshtml">
+      <publishTime>08/23/2018 13:14:44</publishTime>
+    </File>
+    <File Include="Views/Account/_RemoveAccountPartial.cshtml">
+      <publishTime>08/23/2018 13:14:44</publishTime>
+    </File>
+    <File Include="Views/Account/_SetPasswordPartial.cshtml">
+      <publishTime>08/23/2018 13:14:44</publishTime>
+    </File>
+    <File Include="Views/Admin/Index.cshtml">
+      <publishTime>10/03/2018 13:14:12</publishTime>
+    </File>
+    <File Include="Views/Admin/Regadmin.cshtml">
+      <publishTime>09/12/2018 10:48:51</publishTime>
+    </File>
+    <File Include="Views/Adremedy/Create.cshtml">
+      <publishTime>09/10/2018 17:19:41</publishTime>
+    </File>
+    <File Include="Views/Adremedy/Delete.cshtml">
+      <publishTime>09/10/2018 16:40:29</publishTime>
+    </File>
+    <File Include="Views/Adremedy/Details.cshtml">
+      <publishTime>09/10/2018 16:53:21</publishTime>
+    </File>
+    <File Include="Views/Adremedy/Edit.cshtml">
+      <publishTime>09/10/2018 17:44:04</publishTime>
+    </File>
+    <File Include="Views/Adremedy/Index.cshtml">
+      <publishTime>09/10/2018 17:23:38</publishTime>
+    </File>
+    <File Include="Views/AdSymptom/Create.cshtml">
+      <publishTime>09/11/2018 15:33:06</publishTime>
+    </File>
+    <File Include="Views/AdSymptom/Delete.cshtml">
+      <publishTime>09/10/2018 18:02:31</publishTime>
+    </File>
+    <File Include="Views/AdSymptom/Details.cshtml">
+      <publishTime>09/10/2018 18:02:31</publishTime>
+    </File>
+    <File Include="Views/AdSymptom/Edit.cshtml">
+      <publishTime>09/11/2018 15:35:27</publishTime>
+    </File>
+    <File Include="Views/AdSymptom/Index.cshtml">
+      <publishTime>09/11/2018 15:30:38</publishTime>
+    </File>
+    <File Include="Views/Adusers/Create.cshtml">
+      <publishTime>09/12/2018 09:48:19</publishTime>
+    </File>
+    <File Include="Views/Adusers/Delete.cshtml">
+      <publishTime>09/12/2018 09:48:19</publishTime>
+    </File>
+    <File Include="Views/Adusers/Details.cshtml">
+      <publishTime>09/12/2018 09:53:39</publishTime>
+    </File>
+    <File Include="Views/Adusers/Edit.cshtml">
+      <publishTime>09/12/2018 09:48:20</publishTime>
+    </File>
+    <File Include="Views/Adusers/Index.cshtml">
+      <publishTime>09/12/2018 10:14:48</publishTime>
+    </File>
+    <File Include="Views/Booking/Bookcat.cshtml">
+      <publishTime>09/30/2018 10:47:38</publishTime>
+    </File>
+    <File Include="Views/Booking/Bookgme.cshtml">
+      <publishTime>09/02/2018 18:19:46</publishTime>
+    </File>
+    <File Include="Views/Booking/Bookhme.cshtml">
+      <publishTime>09/12/2018 11:31:57</publishTime>
+    </File>
+    <File Include="Views/Booking/Booktype.cshtml">
+      <publishTime>08/31/2018 16:46:36</publishTime>
+    </File>
+    <File Include="Views/Booking/Doclist.cshtml">
+      <publishTime>09/30/2018 09:53:30</publishTime>
+    </File>
+    <File Include="Views/DocHospitals/Create.cshtml">
+      <publishTime>09/10/2018 12:39:52</publishTime>
+    </File>
+    <File Include="Views/DocHospitals/Delete.cshtml">
+      <publishTime>09/10/2018 11:48:20</publishTime>
+    </File>
+    <File Include="Views/DocHospitals/Details.cshtml">
+      <publishTime>09/10/2018 11:48:20</publishTime>
+    </File>
+    <File Include="Views/DocHospitals/Edit.cshtml">
+      <publishTime>09/10/2018 13:05:39</publishTime>
+    </File>
+    <File Include="Views/DocHospitals/Index.cshtml">
+      <publishTime>09/10/2018 13:03:41</publishTime>
+    </File>
+    <File Include="Views/Doctor/AllPending.cshtml">
+      <publishTime>09/11/2018 17:09:17</publishTime>
+    </File>
+    <File Include="Views/Doctor/DocBooked.cshtml">
+      <publishTime>10/03/2018 10:10:32</publishTime>
+    </File>
+    <File Include="Views/Doctor/DocEdit.cshtml">
+      <publishTime>09/11/2018 16:10:24</publishTime>
+    </File>
+    <File Include="Views/Doctor/Doclogin.cshtml">
+      <publishTime>10/03/2018 12:58:29</publishTime>
+    </File>
+    <File Include="Views/Doctor/DocPending.cshtml">
+      <publishTime>10/03/2018 15:22:27</publishTime>
+    </File>
+    <File Include="Views/Doctor/DocProfile.cshtml">
+      <publishTime>09/09/2018 17:45:11</publishTime>
+    </File>
+    <File Include="Views/Doctor/DocRegister.cshtml">
+      <publishTime>10/03/2018 12:58:45</publishTime>
+    </File>
+    <File Include="Views/Doctorcategory/Create.cshtml">
+      <publishTime>09/09/2018 20:09:45</publishTime>
+    </File>
+    <File Include="Views/Doctorcategory/Delete.cshtml">
+      <publishTime>09/09/2018 18:24:39</publishTime>
+    </File>
+    <File Include="Views/Doctorcategory/Details.cshtml">
+      <publishTime>09/09/2018 18:24:39</publishTime>
+    </File>
+    <File Include="Views/Doctorcategory/Edit.cshtml">
+      <publishTime>09/09/2018 20:32:00</publishTime>
+    </File>
+    <File Include="Views/Doctorcategory/Index.cshtml">
+      <publishTime>09/10/2018 11:47:12</publishTime>
+    </File>
+    <File Include="Views/Doctors/Create.cshtml">
+      <publishTime>09/10/2018 13:13:38</publishTime>
+    </File>
+    <File Include="Views/Doctors/Delete.cshtml">
+      <publishTime>09/10/2018 13:13:39</publishTime>
+    </File>
+    <File Include="Views/Doctors/Details.cshtml">
+      <publishTime>09/10/2018 15:21:48</publishTime>
+    </File>
+    <File Include="Views/Doctors/Edit.cshtml">
+      <publishTime>09/10/2018 16:37:03</publishTime>
+    </File>
+    <File Include="Views/Doctors/Index.cshtml">
+      <publishTime>09/10/2018 15:14:24</publishTime>
+    </File>
+    <File Include="Views/FrontPage/Create.cshtml">
+      <publishTime>10/03/2018 13:07:20</publishTime>
+    </File>
+    <File Include="Views/FrontPage/Delete.cshtml">
+      <publishTime>10/03/2018 13:07:21</publishTime>
+    </File>
+    <File Include="Views/FrontPage/Details.cshtml">
+      <publishTime>10/03/2018 13:07:21</publishTime>
+    </File>
+    <File Include="Views/FrontPage/Edit.cshtml">
+      <publishTime>10/03/2018 13:17:11</publishTime>
+    </File>
+    <File Include="Views/FrontPage/Index.cshtml">
+      <publishTime>10/03/2018 13:17:54</publishTime>
+    </File>
+    <File Include="Views/Home/About.cshtml">
+      <publishTime>08/23/2018 13:14:09</publishTime>
+    </File>
+    <File Include="Views/Home/Contact.cshtml">
+      <publishTime>08/23/2018 13:14:09</publishTime>
+    </File>
+    <File Include="Views/Home/home.cshtml">
+      <publishTime>09/12/2018 13:04:05</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>10/03/2018 13:25:43</publishTime>
+    </File>
+    <File Include="Views/Home/Register.cshtml">
+      <publishTime>10/03/2018 12:57:49</publishTime>
+    </File>
+    <File Include="Views/Home/ShowAillment.cshtml">
+      <publishTime>09/30/2018 10:40:25</publishTime>
+    </File>
+    <File Include="Views/Home/ShowDoclist.cshtml">
+      <publishTime>08/29/2018 17:47:39</publishTime>
+    </File>
+    <File Include="Views/Home/Testjava.cshtml">
+      <publishTime>10/03/2018 08:17:53</publishTime>
+    </File>
+    <File Include="Views/Home/UserLogin.cshtml">
+      <publishTime>10/03/2018 12:57:17</publishTime>
+    </File>
+    <File Include="Views/Home/UserPage.cshtml">
+      <publishTime>08/30/2018 16:05:08</publishTime>
+    </File>
+    <File Include="Views/Patient/Allbooking.cshtml">
+      <publishTime>10/03/2018 15:53:04</publishTime>
+    </File>
+    <File Include="Views/Patient/Bookdoctor.cshtml">
+      <publishTime>10/02/2018 13:58:05</publishTime>
+    </File>
+    <File Include="Views/Patient/Index.cshtml">
+      <publishTime>09/06/2018 16:20:10</publishTime>
+    </File>
+    <File Include="Views/Patient/Medhistory.cshtml">
+      <publishTime>09/11/2018 17:25:36</publishTime>
+    </File>
+    <File Include="Views/Patient/View1.cshtml">
+      <publishTime>08/29/2018 14:00:07</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>08/23/2018 13:14:43</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>09/12/2018 13:04:38</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout1.cshtml">
+      <publishTime>09/12/2018 12:28:19</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout2.cshtml">
+      <publishTime>09/12/2018 12:28:44</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layoutadmin.cshtml">
+      <publishTime>10/03/2018 13:14:27</publishTime>
+    </File>
+    <File Include="Views/Shared/_LayoutDoc.cshtml">
+      <publishTime>10/03/2018 10:04:52</publishTime>
+    </File>
+    <File Include="Views/Shared/_LoginPartial.cshtml">
+      <publishTime>08/23/2018 13:14:44</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>08/23/2018 13:14:09</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>08/23/2018 13:14:09</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>10/03/2018 18:28:00</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

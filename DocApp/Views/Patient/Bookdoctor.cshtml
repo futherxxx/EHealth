@@ -1,0 +1,69 @@
+﻿
+
+@{
+    ViewBag.Title = "Bookdoctor";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<link rel="stylesheet" href="~/Content/jquery-ui-timepicker-addon.css">
+<script src="~/Content/jquery-ui-timepicker-addon.js"></script>
+
+<h2>Book Doctor</h2>
+
+<p>Please complete this form, once completed a Doctor will be notified. Thank you</p>
+
+
+<div class="row">
+    <div class="col-sm-12">
+
+        <form id="form1" name="form1" method="post" action="">
+
+            <div class="formclass1">
+                <label for="name">Name: <span class="plsfill">*</span></label>
+                <input type="text" class="form-control" id="pwd" name="name" value="@ViewBag.name" readonly>
+
+            </div>
+
+            <div class="formclass">
+
+                <label for="pwd">Date of Visit:<span class="plsfill">*</span></label>
+                <input type="text" class="form-control" id="datepicker" name="date" required>
+
+            </div>
+
+            <div class="formclass"> 
+
+                <label for="pwd">Preferred Time:<span class="plsfill">*</span></label>
+                <input name="timeofvisit" class="form-control"  type="text" id="timepicker" required />
+
+            </div>
+
+            <div class="formclass1">
+
+                <label for="pwd">Medical Complaint/Information: <span class="plsfill">*</span></label>
+                <textarea class="form-control" rows="2" id="comment" name="othinfo" required>@ViewBag.ailment</textarea>
+
+
+            </div>
+
+
+            <div class="formclass" style="margin-top:20px">
+                <button type="submit" class="btn btn-default"
+                        style="background-color:red;padding:20px;color:white">
+                    Book Doctor
+                </button>
+
+            </div>
+        </form>
+
+    </div>
+</div>
+
+
+<script>
+    $(function () {
+        $("#datepicker").datepicker();
+
+        $("#timepicker").timepicker();
+    });
+</script>

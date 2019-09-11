@@ -1,0 +1,88 @@
+﻿@using DocApp.Models;
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layoutadmin.cshtml";
+
+    DocRegistraton[] docname = (DocRegistraton[])ViewBag.alldocs;
+    string[] catname = (string[])ViewBag.catname;    
+    
+}
+
+<h2>Doctors Manager Module</h2>
+
+<p>
+   
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+
+        <th>
+            Hospital
+        </th>
+        <th width="200px">
+            Address
+        </th>
+       
+        <th>
+            State
+        </th>
+
+        <th>
+           Credentials
+        </th>
+        <th>
+           Category
+        </th>
+        
+        <th>
+           Status
+        </th>
+        
+        <th></th>
+    </tr>
+
+@if (docname.Length != 0) {
+
+for (int i = 0; i < docname.Count(); i++)
+{
+    <tr>
+        <td>
+          @Html.DisplayFor(modelItem => docname[i].docname)
+        </td>
+       
+        <td>
+            @Html.DisplayFor(modelItem => docname[i].hospital)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => docname[i].address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => docname[i].state)
+        </td>
+      
+        <td>@if (docname[i].uploadfile != null) 
+            { <a href="~/Uploads/@docname[i].uploadfile">Download File</a> }
+           
+        </td>        
+        <td>
+            @Html.DisplayFor(modelItem => catname[i])
+        </td>   
+        <td>
+            @Html.DisplayFor(modelItem => docname[i].approve)
+        </td>
+       
+        <td>
+            @Html.ActionLink("Approve", "Edit", new { id = docname[i].id }) |
+            @Html.ActionLink("Details", "Details", new { id = docname[i].id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = docname[i].id })
+        </td>
+    </tr>
+}
+
+}
+
+</table>

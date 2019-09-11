@@ -1,0 +1,176 @@
+﻿@using DocApp.Models;
+
+@{
+    ViewBag.Title = "AllPending";
+    Layout = "~/Views/Shared/_LayoutDoc.cshtml";
+
+
+    UserAppoint user = (UserAppoint)ViewBag.pending;
+
+    Userdata userdetail = (Userdata)ViewBag.userdata;
+
+    List<Medhistory> medhistory = (List<Medhistory>)ViewBag.medrecord;
+    
+    
+    
+}
+
+<h2>Pending Treatment</h2>
+
+<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Complaint</a></li>
+    <li><a data-toggle="tab" href="#menu1">Medical History</a></li>
+    <li><a data-toggle="tab" href="#menu2">Patient Details</a></li>
+    <li><a data-toggle="tab" href="#menu3">Treat Patient</a></li>
+</ul>
+
+<div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+        <p>
+            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td height="30" colspan="2" align="left" valign="top"><span style="font-weight:bold">Ailment:</span><span style="font-weight:bold; color:green"> @user.ailment</span></td>
+                </tr>
+                <tr>
+                    <td width="50%" height="28" align="left" valign="top"><span style="font-weight:bold">Patient Name:</span>@user.username </td>
+                    <td width="50%" align="left" valign="top"><span style="font-weight:bold">Booking Date:</span> @String.Format("{0:dd/MM/yyyy}", user.dateofappoint) </td>
+                </tr>
+                <tr>
+                    <td height="28" align="left" valign="top"><span style="font-weight:bold">Time of Day:</span> @user.timeofvisit</td>
+
+                </tr>
+                <tr>
+                    <td height="20" colspan="2" align="left" valign="middle" style="border-bottom-width: thin; border-bottom-style: solid; border-bottom-color: #999999;">&nbsp;</td>
+                </tr>
+            </table>
+        </p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+        <p>
+           @{
+               if (medhistory.Count() == 0)
+               {
+                   <h3>No medical record available for this Patient</h3>
+                   
+               }
+               else
+               {
+                   foreach (var item in medhistory)
+                   {
+                       
+            <p>          
+          <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+                <td height="30" colspan="2" align="left" valign="top"><span style="font-weight:bold">Treated For: </span><span style="font-weight:bold; color:green">@item.ailment</span></td>
+            </tr>
+            <tr>
+                <td width="100%" height="28" align="left" valign="top"><span style="font-weight:bold">Prescription: </span>@item.treatment </td>
+                  </tr>
+            <tr>
+                <td height="28" align="left" valign="top"><span style="font-weight:bold">Test Done: </span> @item.test</td>
+             </tr>
+              <tr>
+                  <td height="28" align="left" valign="top"><span style="font-weight:bold">Drugs Prescribed: </span> @item.testresult</td>
+              </tr>
+              <tr>
+                  <td height="28" align="left" valign="top"><span style="font-weight:bold">Any recommendation: </span> @item.recommendation</td>
+              </tr>
+              <tr>
+                  <td height="28" align="left" valign="top"><span style="font-weight:bold">Doctor Name: </span> @item.docname</td>
+              </tr>
+              <tr>
+                  <td height="28" align="left" valign="top"><span style="font-weight:bold">Doc. Hospital: </span> @item.hospital</td>
+              </tr>
+              <tr>
+                  <td height="28" align="left" valign="top"><span style="font-weight:bold">Date: </span>@String.Format("{0:dd/MM/yyyy}", item.date)</td>
+              </tr>
+              
+              
+               <tr>
+                <td height="10" colspan="2" align="left" valign="middle" style="border-bottom-width: thin; border-bottom-style: solid; border-bottom-color: #999999;">&nbsp;</td>
+            </tr>
+        </table></p>
+                       
+                       
+                   }
+                   
+                   
+               }
+               
+               
+               
+           }
+        </p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+        <p>
+            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td height="30" colspan="2" align="left" valign="top"><span style="font-weight:bold">Name:</span><span style="font-weight:bold; color:green"> @userdetail.firstname @userdetail.surname</span></td>
+                </tr>
+                <tr>
+                    <td width="50%" height="28" align="left" valign="top"><span style="font-weight:bold">Age:</span>@userdetail.age</td>
+                    <td width="50%" align="left" valign="top"><span style="font-weight:bold">Stautus:</span> @userdetail.maritalstatus </td>
+                </tr>
+                <tr>
+                    <td height="28" align="left" valign="top">
+                        <span style="font-weight:bold">Medical Info:</span>
+       
+                       </td>
+
+        </tr>
+        <tr>
+            <td height="20" colspan="2" align="left" valign="middle" style="border-bottom-width: thin; border-bottom-style: solid; border-bottom-color: #999999;">&nbsp;</td>
+        </tr>
+        </table>
+        </p>
+    </div>
+    <div id="menu3" class="tab-pane fade">
+        <p>
+            <form id="form1" name="form1" method="post" action="">
+
+                <div>
+                    <label for="name">TREATED FOR: <span class="plsfill">*</span></label>
+                    <input type="text" class="form-control" id="pwd" name="ailment" value="@user.ailment" required><br/>
+
+                </div>
+
+                <div>
+
+                    <label for="pwd">DRUGS PRESCRIBED:<span class="plsfill">*</span></label>
+                    <textarea class="form-control" rows="1" id="address" name="dprescribe" required>NONE</textarea><br />
+
+                </div>
+                <div>
+
+                    <label for="pwd">ANY TESTS DONE:<span class="plsfill">*</span></label>
+                    <textarea class="form-control" rows="1" id="address" name="test" required>NONE</textarea><br />
+
+                </div>
+                <div>
+
+                    <label for="pwd">TEST RESULTS:<span class="plsfill">*</span></label>
+                    <textarea class="form-control" rows="1" id="address" name="testresult" required>NONE</textarea><br />
+
+                </div>
+                <div>
+
+                    <label for="pwd">RECOMMMENDATION:<span class="plsfill">*</span></label>
+                    <textarea class="form-control" rows="1" id="address" name="recommend" required>NONE</textarea><br />
+
+                </div>
+
+
+
+                <div style="margin-top:20px">
+                    <button type="submit" class="btn btn-default"
+                            style="background-color:green;width:100px;height:40px;font-weight:bold;color:white">
+                        SUBMIT
+                    </button>
+
+                </div>
+
+            </form>
+        </p>
+    </div>
+</div>

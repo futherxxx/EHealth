@@ -1,0 +1,370 @@
+﻿@model IEnumerable<DocApp.Models.UserAppoint>  
+
+
+@{
+    ViewBag.Title = "DocPending";
+    Layout = "~/Views/Shared/_LayoutDoc.cshtml";
+    
+    
+}
+
+<link rel="stylesheet" href="~/Content/jquery-ui-timepicker-addon.css">
+<script src="~/Content/jquery-ui-timepicker-addon.js"></script>
+
+<style>
+
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+    }
+
+    /* The Close Button */
+    .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .myclose {
+            float: right;
+            font-size: large;
+           
+        }
+</style>
+
+
+
+<h2>Pending Cases</h2>
+
+@{if (ViewBag.error != null)
+{ <div class="alert alert-danger alert-dismissible">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong> @ViewBag.error.</strong>
+    </div>
+
+}
+
+  else
+  {
+     <div>
+
+   <p style="border-bottom-width: thin; border-bottom-style: solid; border-bottom-color: palevioletred;">All pending treatments</p>
+
+       @foreach (var item in Model)
+{
+    <p>
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+                <td height="30" colspan="2" align="left" valign="top"><span style="font-weight:bold">Ailment: </span><span style="font-weight:bold; color:green;font-size:18px">@item.ailment </span></td>
+            </tr>
+            <tr>
+                <td width="50%" height="28" align="left" valign="top"><span style="font-weight:bold">Patient Name: </span> @item.username </td>
+                <td width="50%" align="left" valign="top">&nbsp; </td>
+            </tr>
+            <tr>
+                <td height="28" align="left" valign="top"><span style="font-weight:bold">Booking Date/Time: </span> 
+                @String.Format("{0:dd/MM/yyyy}", item.dateofappoint) &nbsp; @item.timeofvisit
+                </td>
+                <td align="left" valign="top">&nbsp;</td>
+            </tr>
+            <tr id="@item.id">
+                <td height="28" align="left" valign="middle">
+
+                    <button id="@item.id" onclick="disappoint('@item.id')">Confirm Date</button> &nbsp;&nbsp;&nbsp;
+                    <button id="@item.id" onclick="dismiss('@item.id')">Reschedule</button>
+                </td>
+               <tr>
+             <td height="10" colspan="2" align="left" valign="middle" style="border-bottom-width: thin; border-bottom-style: solid; border-bottom-color: #999999;">&nbsp;</td>
+            </tr>
+        </table>
+    </p>
+}
+</div>
+  
+  }
+}
+
+
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close" style="color: red;">CLOSE</span>
+        <form id="form1" name="form1" method="post" action="" onsubmit="return dismissclick()">
+            <table width="36%" border="0">
+                <tr>
+                    <td width="34%" height="34" align="left" valign="top">Preferred Date: </td>
+                    <td width="2%">&nbsp;</td>
+                    <td width="64%" align="left" valign="top">
+                        <label>
+                            <input name="date" type="text" id="datepicker" required />
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="35" align="left" valign="top">Time:</td>
+                    <td>&nbsp;</td>
+                    <td align="left" valign="top">
+                        <label>
+                            <input name="time" type="text" id="timepicker" required />
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="35" align="left" valign="top">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td align="left" valign="bottom">
+                        <label>
+                            <input type="submit" name="Submit" value="Reschedule" id="show" />
+                        </label>
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+        
+
+        
+    </div>
+
+</div>
+
+<div id="myModalappoint" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="myclose" style="color: red;">CLOSE</span>
+        <form id="form1" name="form1" method="post" action="" onsubmit="return addfee()">
+            <table width="36%" border="0">
+                <tr>
+                    <td width="34%" height="34" align="left" valign="top">Add Fee/Other Info: </td>
+                    <td width="2%">&nbsp;</td>
+                    <td width="64%" align="left" valign="top">
+                        <label>
+                            <textarea class="form-control" rows="2" placeholder="Add Fees" id="otherfee" name="fees"></textarea>
+                        </label>
+                    </td>
+                </tr>   
+                <tr>
+                    <td height="35" align="left" valign="top">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td align="left" valign="bottom">
+                        <label>
+                            <input type="submit" name="Submit" value="Submit" id="show" />
+                        </label>
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+
+
+
+    </div>
+
+</div>
+
+<script>
+ 
+    var dismissid = "";
+
+
+
+    function addfee() {
+
+        var getid = dismissid;
+
+        var fees = document.getElementById("otherfee").value;
+     
+
+        var allfees = JSON.stringify({
+            'id': getid,
+            'fee': fees
+        });
+
+
+       
+
+        $.ajax({
+            type: "POST",
+            url: "/Home/Fees",
+            cache: false,
+            data: allfees,
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (response, status) {
+
+                alert(response);
+
+                //location.reload();
+
+                window.location = window.location.pathname;
+
+            },
+            failure: function (response) {
+                alert(response.responseText);
+            },
+            error: function (response) {
+                alert(response.responseText);
+            }
+        });
+
+        if (getid != "") {
+
+            return false;
+        }
+ }
+
+    function dismiss(one1) {
+        
+        dismissid = one1;
+
+        var modal = document.getElementById('myModal');
+
+        var btn = document.getElementById(one1);
+
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function () {
+
+           modal.style.display = "block";
+        }
+
+        
+        span.onclick = function () {
+           
+
+            modal.style.display = "none";
+
+           
+        }
+
+    }
+
+    function disappoint(one1) {
+
+        dismissid = one1; 
+
+        var modal1 = document.getElementById('myModalappoint');
+
+        var btn = document.getElementById(one1);
+
+        var span = document.getElementsByClassName("myclose")[0];
+
+        btn.onclick = function () {
+
+            modal1.style.display = "block";
+        }
+
+
+
+        span.onclick = function () {
+            modal1.style.display = "none";
+        }
+
+    }
+
+
+
+
+
+    function dismissclick() {
+
+        var getid = dismissid;
+
+        var modal = document.getElementById('myModal');
+
+        var modal1 = document.getElementById(getid);
+
+        var submitid = document.getElementById("show");
+
+        var gettime = document.getElementById("timepicker").value;
+
+        var getdate = document.getElementById("datepicker").value;
+
+        var alldata = JSON.stringify({
+            'id': getid,
+            'date': getdate, 'time': gettime
+        });
+
+
+    
+
+        $.ajax({
+            type: "POST",
+            url: "/Home/Reschedule",
+            cache: false,
+            data: alldata,
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (response, status) {
+
+               
+                alert(response);
+
+                modal.style.display = "none";
+
+                modal1.style.display = "none";
+
+
+                window.location = window.location.pathname;
+
+            },
+            failure: function (response) {
+                alert(response.responseText);
+            },
+            error: function (response) {
+                alert(response.responseText);
+            }
+        });
+
+        if (getdate != "") {
+
+            return false;
+        }
+
+    }
+
+
+
+
+
+    $(function () {
+
+        $("#timepicker").timepicker();
+
+        $("#datepicker").datepicker();
+
+       
+
+    });
+    
+
+</script>

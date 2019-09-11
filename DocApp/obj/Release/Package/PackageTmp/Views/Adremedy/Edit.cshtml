@@ -1,0 +1,101 @@
+﻿@using DocApp.Models;
+
+@model DocApp.Models.RemedyTable
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layoutadmin.cshtml";
+
+    List<DocCategory> cat = (List<DocCategory>)ViewBag.cat;
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Edit Remedy Table</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.id)
+        @Html.HiddenFor(model => model.date)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Remedy, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Remedy)
+                @Html.ValidationMessageFor(model => model.Remedy)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Definition, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <textarea class="form-control" rows="1" id="address" name="Definition" required>@Model.Definition</textarea>
+                @Html.ValidationMessageFor(model => model.Definition)
+            </div>
+        </div>
+
+       
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.cattype, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+              
+                <select class="form-control" id="state" name="cattype">
+                    <option selected="selected" value=@ViewBag.catname.id>
+                        @ViewBag.catname.CatName
+                    </option>
+                    @{
+                        if (cat.Count() != 0)
+                        {
+                            foreach (var item in cat)
+                            {
+
+                                <option value="@item.id">@item.CatName</option>
+
+                            }
+
+
+                        }
+
+
+                    }
+
+                </select>
+
+
+                
+                 @Html.ValidationMessageFor(model => model.cattype)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Causes, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <textarea class="form-control" rows="1" id="address" name="Causes" required>@Model.Causes</textarea>
+                @Html.ValidationMessageFor(model => model.Causes)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Prevention, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <textarea class="form-control" rows="1" id="address" name="Prevention" required>@Model.Prevention</textarea>
+                @Html.ValidationMessageFor(model => model.Prevention)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

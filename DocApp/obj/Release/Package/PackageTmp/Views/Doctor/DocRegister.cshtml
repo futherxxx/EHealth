@@ -1,0 +1,71 @@
+﻿@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+@{if (ViewBag.error != null)
+{ <div class="alert alert-danger alert-dismissible">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong> @ViewBag.error.</strong>
+    </div>
+
+}
+
+}
+
+<div class="row">
+
+    <div class="col-sm-8">
+    </div>
+    <div class="col-sm-4">
+        <a href="~/home" class="btn btn-primary" role="button">Back to Home</a>&nbsp;&nbsp;
+        <a href="~/doctor/doclogin" class="btn btn-primary" role="button">Doctor Login Here</a>
+    </div>
+</div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div style="width: 350px; margin: 0 auto; box-shadow: 5px 10px 5px grey; padding: 20px; border-radius: 15px;">
+
+                <div style="border-bottom-width: thin; border-bottom-style: solid; border-bottom-color: #999999;margin-bottom:20px"><h2>Doctor Registration</h2></div>
+
+
+
+                <form id="form1" name="form1" method="post" action="">
+
+                    <div>
+                        <label for="name">USERNAME: <span class="plsfill">*</span></label>
+                        <input type="text" class="form-control" id="pwd" name="name" required><br />
+
+                    </div>
+
+                    <div>
+
+                        <label for="pwd">PASSWORD:<span class="plsfill">*</span></label>
+                        <input type="password" class="form-control" id="" name="password" required><br />
+
+                    </div>
+
+                    <div>
+
+                        <label for="pwd">CONFIRM PASSWORD:<span class="plsfill">*</span></label>
+                        <input type="password" class="form-control" id="" name="password1" required><br />
+
+                    </div>
+
+
+
+                    <div style="margin-top:20px">
+                        <button type="submit" class="btn btn-default"
+                                style="background-color: #253B50; width: 100px; height: 40px; font-weight: bold; color: white">
+                            REGISTER
+                        </button>
+
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+

@@ -1,0 +1,150 @@
+﻿@using DocApp.Models;
+
+@{
+    ViewBag.Title = "DocProfile";
+    Layout = "~/Views/Shared/_LayoutDoc.cshtml";
+
+    List<DocCategory> allcat = (List<DocCategory>)ViewBag.category;
+
+    DocRegistraton docreg = (DocRegistraton)ViewBag.editdoc;
+
+}
+
+<h2>Doctor Edit</h2>
+
+<div>
+
+
+    @{if (ViewBag.error != null)
+    { <div class="alert alert-danger alert-dismissible">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong> @ViewBag.error.</strong>
+    </div>
+
+    }
+
+    }
+
+    <div class="row">
+        <div class="col-sm-12">
+
+
+
+            <form id="form1" name="form1" method="post" action="~/doctor/docedit">
+
+
+                <div class="formclass1">
+                    <label for="name">Full Name: <span class="plsfill">*</span></label>
+                    <div style="width: 100%;">
+                        <select class="form-control" id="sel1" name="doctitle" style="width: 10%; float: left; ">
+                            <option>Dr</option>
+                            <option>Prof</option>
+                            <option>Mr</option>
+                            <option>Mrs</option>
+
+                        </select>
+
+                        <input type="text" class="form-control" id="pwd" name="fullname" placeholder="please enter full name"
+                             value="@docreg.docname"  style="width: 90%; float: left; " required>
+                    </div>
+                </div>
+                <div class="formclass1">
+
+                    <label for="pwd">Hospital Name:<span class="plsfill">*</span></label>
+                    <input type="text" value="@docreg.hospital" class="form-control" id="pwd" name="hospital" required>
+
+                </div>
+                <div class="formclass1">
+
+                    <label for="pwd">Hospital Address:<span class="plsfill">*</span></label>
+                    <textarea class="form-control" rows="1" id="address" name="address" required>@docreg.address</textarea>
+
+                </div>
+                <div class="formclass1">
+
+                    <label for="pwd">State:<span class="plsfill">*</span></label>
+                    <select class="form-control" id="state" name="state">
+                        <option selected="selected" value="@docreg.state">
+                          @docreg.state
+                        </option>
+
+                        @{
+                            if (ViewBag.states != null)
+                            {
+                                foreach (var item in ViewBag.states)
+                                {
+
+                                    <option value="@item">@item</option>
+
+                                }
+
+
+                            }
+
+
+                        }
+
+                    </select>
+
+                </div>
+
+                <div class="formclass1">
+
+                    <label for="pwd">Specialty:<span class="plsfill">*</span></label> &nbsp;
+                    <input type="text" value="@docreg.Specialty" class="form-control" id="pwd" name="specialty" placeholder="please enter field you specialize in" required>
+
+                </div>
+                <div class="formclass1">
+
+                    <label for="pwd">Category:<span class="plsfill">*</span></label> &nbsp;
+                    <select class="form-control" id="sel1" name="category">
+                        <option selected="selected" value="@docreg.cattype">
+                           
+                        </option>
+                        
+                        @{
+                            if (allcat != null)
+                            {
+                                foreach (var item in allcat)
+                                {
+
+                                    <option value="@item.id">@item.CatName</option>
+
+                                }
+
+
+                            }
+
+
+                        }
+
+                    </select>
+
+                </div>
+
+                <div class="formclass1">
+
+                    <label for="pwd">Other Info about Profession:</label>
+                    <textarea class="form-control" rows="2" id="comment" name="otherinfo">@docreg.OtherInfo</textarea>
+
+
+                </div>
+
+
+
+                <div class="formclass" style="margin-top:20px">
+                    <button type="submit" class="btn btn-default"
+                            style="background-color:red;width:150px;height:40px;font-weight:bold;color:white;">
+                        Edit Profile
+                    </button>
+
+                </div>
+
+
+
+            </form>
+
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,152 @@
+﻿@model DocApp.Models.Userdata
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+
+
+
+<h2>User Registration Form</h2>
+
+<div>
+
+    <p>Please complete this User registration form with your, this enables you book an appointment with a Doctor</p>
+
+    <div class="row">
+        <div class="col-sm-12">
+
+            <form id="form1" name="form1" method="post" action="">
+
+                @Html.HiddenFor(m => m.id)
+                @Html.HiddenFor(m => m.username)
+                @Html.HiddenFor(m => m.password)
+
+
+               
+            
+
+                <div class="formclass">
+                    <label for="name">First Name: <span class="plsfill">*</span></label>
+                    <input type="text" class="form-control" id="pwd" name="firstname" value="@Model.firstname" required>
+
+                </div>
+                <div class="formclass">
+
+                    <label for="pwd">Last Name:<span class="plsfill">*</span></label>
+                    <input type="text" class="form-control" id="pwd" name="surname" value="@Model.surname" required>
+
+                </div>
+
+                <div class="formclass">
+
+                    <label for="pwd">Gender:<span class="plsfill">*</span></label> &nbsp;
+                    <label class="radio-inline"><input type="radio" name="gender" value="Male" checked>Male</label>
+                    <label class="radio-inline"><input type="radio" name="gender" value="Female">Female</label>
+
+                </div>
+                <div class="formclass">
+
+                    <label for="pwd">Email:<span class="plsfill">*</span></label> &nbsp;
+                    <input type="email" class="form-control" id="pwd" name="email" value="@Model.email" required>
+
+                </div>
+
+                <div class="formclass">
+                    <label for="name">Phone:<span class="plsfill">*</span></label>
+                    <input type="text" class="form-control" id="pwd" name="phone" value="@Model.phone" required>
+
+                </div>
+                <div class="formclass">
+
+                    <label for="pwd">Date of Birth:<span class="plsfill">*</span></label>
+                    <input type="text" class="form-control" id="datepicker" name="dob" value="@Model.dob" required>
+
+                </div>
+
+                <div class="formclass">
+
+                    <label for="pwd">AGE:<span class="plsfill">*</span></label>
+                    <input type="number" class="form-control"  name="age" value="@Model.age" required>
+
+                </div>
+
+                <div class="formclass">
+
+
+                    <label for="pwd">Marital Status:<span class="plsfill">*</span></label> &nbsp;
+                    <label class="radio-inline"><input type="radio" name="maritalstatus" value="Single" checked>Single</label>
+                    <label class="radio-inline"><input type="radio" name="maritalstatus" value="Married">Married</label>
+                    <label class="radio-inline"><input type="radio" name="maritalstatus" value="Divorced">Divorced</label> 
+                    <label class="radio-inline"><input type="radio" name="maritalstatus" value="Widow">Widow</label> 
+
+                </div>
+                <div style="clear:both"></div>
+
+                <div class="formclass1">
+
+                    <label for="pwd">Patient's Address:<span class="plsfill">*</span></label>
+                    <textarea class="form-control" rows="2" id="comment" name="address" required>@Model.address</textarea>
+
+                    
+                </div>
+
+                <div class="formclass1">
+                    
+
+                    <label for="pwd">Past medical history:</label><br/>
+                    <label class="checkbox-inline"><input type="checkbox" name="medicalhistry" value="Anemia">Anemia</label>
+                    <label class="checkbox-inline"><input type="checkbox" name="medicalhistry" value="Asthma">Asthma</label>
+                    <label class="checkbox-inline"><input type="checkbox" name="medicalhistry" value="">Bronchitis</label>
+                    <label class="checkbox-inline"><input type="checkbox" name="medicalhistry" value="Bronchitis">Chickenpox</label>
+                    <label class="checkbox-inline"><input type="checkbox" name="medicalhistry" value="Diabetes">Diabetes</label>
+                    <label class="checkbox-inline"><input type="checkbox" name="medicalhistry" value="Pneumonia">Pneumonia</label>
+                    <label class="checkbox-inline"><input type="checkbox" name="medicalhistry" value="Thyroid Disease">Thyroid Disease</label>
+                    <label class="checkbox-inline"><input type="checkbox" name="medicalhistry" value="Ulcer">Ulcer</label>
+
+
+                </div>
+                <div class="formclass1">
+
+                    <label for="pwd">Other Useful Medical Information:</label>
+                    <textarea class="form-control" rows="2" id="comment" name="otherinfo">@Model.otherinfo</textarea>
+
+
+                </div>
+                
+                @if (Model.firstname != null)
+                {
+
+                   <div class="formclass" style="margin-top:20px">
+                    <button type="submit" class="btn btn-default" 
+                       style="background-color:red;width:100px;height:40px;font-weight:bold;color:white">Edit Profile</button>
+
+                </div>
+                }
+
+                else
+                {
+                    
+                    <div class="formclass" style="margin-top:20px">
+                    <button type="submit" class="btn btn-default" 
+                       style="background-color:red;width:100px;height:40px;font-weight:bold;color:white">Register</button>
+
+                  </div>
+                    
+                }
+
+                 
+            </form>
+
+        </div>
+    </div>
+
+        </div>
+
+<script>
+    $(function () {
+        $("#datepicker").datepicker();
+    });
+</script>

@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewBag.Title = "Regadmin";
+    Layout = "~/Views/Shared/_Layoutadmin.cshtml";
+}
+
+@{if (ViewBag.error != "USER ADDED" && ViewBag.error != null)
+{ <div class="alert alert-danger alert-dismissible">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong> @ViewBag.error.</strong>
+    </div>
+
+}
+  else if (ViewBag.error == "USER ADDED")
+  {
+      <div class="alert alert-success alert-dismissible">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong> @ViewBag.error.</strong>
+    </div>      
+      
+  }
+
+}
+
+
+<div style="border-bottom-width: thin; border-bottom-style: solid; border-bottom-color: #999999;margin-bottom:20px"><h2>Add New Administrator</h2></div>
+
+
+<div class="row">
+    <div class="col-sm-12">
+        <div style="width: 350px; margin: 0 auto; box-shadow: 5px 10px 5px grey; padding: 20px; border-radius: 15px;">
+
+            <div style="border-bottom-width: thin; border-bottom-style: solid; border-bottom-color: #999999;margin-bottom:20px"><h2>Admin Registration</h2></div>
+
+
+
+            <form id="form1" name="form1" method="post" action="">
+
+                <div>
+                    <label for="name">USERNAME: <span class="plsfill">*</span></label>
+                    <input type="text" class="form-control" id="pwd" name="name" required><br />
+
+                </div>
+
+                <div>
+
+                    <label for="pwd">PASSWORD:<span class="plsfill">*</span></label>
+                    <input type="password" class="form-control" id="" name="password" required><br />
+
+                </div>
+
+                <div>
+
+                    <label for="pwd">CONFIRM PASSWORD:<span class="plsfill">*</span></label>
+                    <input type="password" class="form-control" id="" name="password1" required><br />
+
+                </div>
+
+
+
+                <div style="margin-top:20px">
+                    <button type="submit" class="btn btn-default"
+                            style="background-color:green;width:100px;height:40px;font-weight:bold;color:white">
+                        REGISTER
+                    </button>
+
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+</div>
+

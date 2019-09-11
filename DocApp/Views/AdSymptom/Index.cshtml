@@ -1,0 +1,92 @@
+﻿@using DocApp.Models;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layoutadmin.cshtml";
+
+    symptomtable[] docname = (symptomtable[])ViewBag.allsymp;
+    //string[] catname = (string[])ViewBag.remname;
+
+    List<RemedyTable> dropsymp = (List<RemedyTable>)ViewBag.alldocs;
+
+    string rem = "";
+}
+
+<h2>Symptoms Manager</h2>
+
+<p>
+   &nbsp;
+</p>
+
+<div class="row">
+    <div class="col-sm-2">
+        @Html.ActionLink("Create New Symptom", "Create")
+      
+    </div>
+    <div class="col-sm-6">
+       
+        @using (Html.BeginForm())
+{
+
+    <select class="form-control" id="state" name="remedy" style="float:left;width:50%">
+
+        @{
+    if (dropsymp.Count() != 0)
+    {
+        foreach (var item in dropsymp)
+        {
+            <option value="@item.id">@item.Remedy</option>
+
+        }
+    }
+        }
+
+    </select>
+     <input type="hidden" id="custId" name="getrem" value="@rem">
+     <input type="submit" value="List Symptoms" class="btn btn-default" style="float: left; width: 30%" />
+        }
+    </div>
+       
+</div>
+
+<div>
+    &nbsp;
+
+</div>
+
+@if (docname != null) { 
+
+ <h3>@ViewBag.remname Symptoms</h3> 
+    
+    <table class="table">
+            <tr>
+                <th>
+                    Symptom
+                </th>
+               
+                <th></th>
+            </tr>
+
+            @if (docname.Length != 0)
+            {
+
+                for (int i = 0; i < docname.Count(); i++)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => docname[i].symptom)
+                        </td>
+
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = docname[i].id }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = docname[i].id })
+                        </td>
+                    </tr>
+                }
+
+            }
+
+        </table>
+
+}
+
+

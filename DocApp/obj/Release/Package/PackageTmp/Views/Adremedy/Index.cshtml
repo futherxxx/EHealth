@@ -1,0 +1,71 @@
+﻿@using DocApp.Models;
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layoutadmin.cshtml";
+
+    RemedyTable[] docname = (RemedyTable[])ViewBag.alldocs;
+    string[] catname = (string[])ViewBag.catname;    
+}
+
+<h2>Ailment Manager</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Remedy Name
+        </th>
+        <th>
+            Definition
+        </th>
+
+        <th>
+            Category
+        </th>
+        <th>
+            Causes
+        </th>
+        <th>
+            Prevention
+        </th>
+        <th></th>
+    </tr>
+
+    @if (docname.Length != 0)
+    {
+
+        for (int i = 0; i < docname.Count(); i++)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => docname[i].Remedy)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => docname[i].Definition)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => catname[i])
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => docname[i].Causes)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => docname[i].Prevention)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = docname[i].id }) |
+                    @Html.ActionLink("Details", "Details", new { id = docname[i].id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = docname[i].id })
+                </td>
+            </tr>
+        }
+
+    }
+
+</table>

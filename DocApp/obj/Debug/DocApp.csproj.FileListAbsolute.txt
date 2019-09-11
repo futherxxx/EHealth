@@ -1,0 +1,112 @@
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\DocApp.dll.config
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\DocApp.dll
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\DocApp.pdb
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\Antlr3.Runtime.dll
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\EntityFramework.dll
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\EntityFramework.SqlServer.dll
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\Microsoft.Owin.dll
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\Microsoft.Owin.Security.dll
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\Microsoft.Owin.Security.Google.dll
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\Microsoft.Web.Infrastructure.dll
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\Newtonsoft.Json.dll
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\Owin.dll
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\System.Web.Helpers.dll
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\System.Web.Mvc.dll
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\System.Web.Optimization.dll
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\System.Web.Razor.dll
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\System.Web.WebPages.Deployment.dll
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\System.Web.WebPages.dll
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\System.Web.WebPages.Razor.dll
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\WebGrease.dll
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\System.Web.Helpers.xml
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\System.Web.Mvc.xml
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\System.Web.Optimization.xml
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\System.Web.Razor.xml
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\System.Web.WebPages.xml
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\System.Web.WebPages.Deployment.xml
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\System.Web.WebPages.Razor.xml
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\Newtonsoft.Json.xml
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\Antlr3.Runtime.pdb
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\EntityFramework.xml
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\EntityFramework.SqlServer.xml
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\Microsoft.Owin.xml
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\Microsoft.Owin.Security.xml
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\Microsoft.Owin.Security.Google.xml
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\obj\Debug\DocApp.csprojResolveAssemblyReference.cache
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\obj\Debug\DocApp.dll
+c:\users\therapy\documents\visual studio 2013\Projects\DocApp\DocApp\obj\Debug\DocApp.pdb
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\DocApp.dll.config
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\DocApp.dll
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\DocApp.pdb
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\Antlr3.Runtime.dll
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\EntityFramework.dll
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\EntityFramework.SqlServer.dll
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\Microsoft.Owin.dll
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\Microsoft.Owin.Security.dll
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\Newtonsoft.Json.dll
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\Owin.dll
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\System.Web.Helpers.dll
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\System.Web.Mvc.dll
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\System.Web.Optimization.dll
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\System.Web.Razor.dll
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\System.Web.WebPages.Deployment.dll
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\System.Web.WebPages.dll
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\System.Web.WebPages.Razor.dll
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\WebGrease.dll
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\System.Web.Helpers.xml
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\System.Web.Mvc.xml
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\System.Web.Optimization.xml
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\System.Web.Razor.xml
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\System.Web.WebPages.xml
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\System.Web.WebPages.Deployment.xml
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\System.Web.WebPages.Razor.xml
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\Newtonsoft.Json.xml
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\Antlr3.Runtime.pdb
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\EntityFramework.xml
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\EntityFramework.SqlServer.xml
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\Microsoft.Owin.xml
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\Microsoft.Owin.Security.xml
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\obj\Debug\DocApp.csprojAssemblyReference.cache
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\obj\Debug\DocApp.csproj.CoreCompileInputs.cache
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\obj\Debug\DocApp.csproj.CopyComplete
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\obj\Debug\DocApp.dll
+C:\Users\stephen.alade\Downloads\DocApp (1)\DocApp\obj\Debug\DocApp.pdb

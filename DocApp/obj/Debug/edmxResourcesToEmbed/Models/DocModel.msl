@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DoctorSearchModelStoreContainer" CdmEntityContainer="DoctorSearchEntities">
+    <EntitySetMapping Name="RemedyTables">
+      <EntityTypeMapping TypeName="DoctorSearchModel.RemedyTable">
+        <MappingFragment StoreEntitySet="RemedyTable">
+          <ScalarProperty Name="Prevention" ColumnName="Prevention" />
+          <ScalarProperty Name="Causes" ColumnName="Causes" />
+          <ScalarProperty Name="cattype" ColumnName="cattype" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Remedy" ColumnName="Remedy" />
+          <ScalarProperty Name="Definition" ColumnName="Definition" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="symptomtables">
+      <EntityTypeMapping TypeName="DoctorSearchModel.symptomtable">
+        <MappingFragment StoreEntitySet="symptomtable">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="symptom" ColumnName="symptom" />
+          <ScalarProperty Name="remedy" ColumnName="remedy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Userdatas">
+      <EntityTypeMapping TypeName="DoctorSearchModel.Userdata">
+        <MappingFragment StoreEntitySet="Userdata">
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="otherinfo" ColumnName="otherinfo" />
+          <ScalarProperty Name="medicalhistry" ColumnName="medicalhistry" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="maritalstatus" ColumnName="maritalstatus" />
+          <ScalarProperty Name="dob" ColumnName="dob" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="regdate" ColumnName="regdate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DocRegistratons">
+      <EntityTypeMapping TypeName="DoctorSearchModel.DocRegistraton">
+        <MappingFragment StoreEntitySet="DocRegistraton">
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="approve" ColumnName="approve" />
+          <ScalarProperty Name="cattype" ColumnName="cattype" />
+          <ScalarProperty Name="hostype" ColumnName="hostype" />
+          <ScalarProperty Name="uploadfile" ColumnName="uploadfile" />
+          <ScalarProperty Name="OtherInfo" ColumnName="OtherInfo" />
+          <ScalarProperty Name="hospital" ColumnName="hospital" />
+          <ScalarProperty Name="Specialty" ColumnName="Specialty" />
+          <ScalarProperty Name="regdate" ColumnName="regdate" />
+          <ScalarProperty Name="docpassword" ColumnName="docpassword" />
+          <ScalarProperty Name="docusername" ColumnName="docusername" />
+          <ScalarProperty Name="docname" ColumnName="docname" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DocRemedies">
+      <EntityTypeMapping TypeName="DoctorSearchModel.DocRemedy">
+        <MappingFragment StoreEntitySet="DocRemedies">
+          <ScalarProperty Name="remdoctor" ColumnName="remdoctor" />
+          <ScalarProperty Name="remtype" ColumnName="remtype" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DocCategories">
+      <EntityTypeMapping TypeName="DoctorSearchModel.DocCategory">
+        <MappingFragment StoreEntitySet="DocCategory">
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="CatName" ColumnName="CatName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DocHospitals">
+      <EntityTypeMapping TypeName="DoctorSearchModel.DocHospital">
+        <MappingFragment StoreEntitySet="DocHospital">
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="Otherinfo" ColumnName="Otherinfo" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Hospitaladdress" ColumnName="Hospitaladdress" />
+          <ScalarProperty Name="Hospitalname" ColumnName="Hospitalname" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserAppoints">
+      <EntityTypeMapping TypeName="DoctorSearchModel.UserAppoint">
+        <MappingFragment StoreEntitySet="UserAppoint">
+          <ScalarProperty Name="otherfee" ColumnName="otherfee" />
+          <ScalarProperty Name="treatapprove" ColumnName="treatapprove" />
+          <ScalarProperty Name="doctime" ColumnName="doctime" />
+          <ScalarProperty Name="docdate" ColumnName="docdate" />
+          <ScalarProperty Name="approve" ColumnName="approve" />
+          <ScalarProperty Name="booktype" ColumnName="booktype" />
+          <ScalarProperty Name="docid" ColumnName="docid" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="timeofvisit" ColumnName="timeofvisit" />
+          <ScalarProperty Name="dateofappoint" ColumnName="dateofappoint" />
+          <ScalarProperty Name="ailment" ColumnName="ailment" />
+          <ScalarProperty Name="docaddress" ColumnName="docaddress" />
+          <ScalarProperty Name="dochos" ColumnName="dochos" />
+          <ScalarProperty Name="docname" ColumnName="docname" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserMedHistories">
+      <EntityTypeMapping TypeName="DoctorSearchModel.UserMedHistory">
+        <MappingFragment StoreEntitySet="UserMedHistory">
+          <ScalarProperty Name="appointid" ColumnName="appointid" />
+          <ScalarProperty Name="testresult" ColumnName="testresult" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="recommendation" ColumnName="recommendation" />
+          <ScalarProperty Name="test_done" ColumnName="test_done" />
+          <ScalarProperty Name="treatment_prescribe" ColumnName="treatment_prescribe" />
+          <ScalarProperty Name="ailment" ColumnName="ailment" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="docid" ColumnName="docid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FrontPages">
+      <EntityTypeMapping TypeName="DoctorSearchModel.FrontPage">
+        <MappingFragment StoreEntitySet="FrontPage">
+          <ScalarProperty Name="contact" ColumnName="contact" />
+          <ScalarProperty Name="textbody" ColumnName="textbody" />
+          <ScalarProperty Name="header" ColumnName="header" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

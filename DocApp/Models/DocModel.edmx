@@ -1,0 +1,477 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DoctorSearchModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DocCategory">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CatName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="date" Type="date" />
+        </EntityType>
+        <EntityType Name="DocHospital">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Hospitalname" Type="varchar(max)" Nullable="false" />
+          <Property Name="Hospitaladdress" Type="varchar(max)" Nullable="false" />
+          <Property Name="State" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Otherinfo" Type="varchar(max)" />
+          <Property Name="mobile" Type="nvarchar" MaxLength="50" />
+          <Property Name="date" Type="date" />
+        </EntityType>
+        <EntityType Name="DocRegistraton">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="docname" Type="varchar" MaxLength="50" />
+          <Property Name="hospital" Type="varchar(max)" />
+          <Property Name="address" Type="varchar(max)" />
+          <Property Name="state" Type="varchar" MaxLength="50" />
+          <Property Name="docusername" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="docpassword" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="regdate" Type="datetime" />
+          <Property Name="Specialty" Type="varchar(max)" />
+          <Property Name="OtherInfo" Type="varchar(max)" />
+          <Property Name="uploadfile" Type="varchar(max)" />
+          <Property Name="hostype" Type="int" />
+          <Property Name="cattype" Type="int" />
+          <Property Name="approve" Type="int" />
+        </EntityType>
+        <EntityType Name="DocRemedies">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="remtype" Type="int" />
+          <Property Name="remdoctor" Type="int" />
+        </EntityType>
+        <EntityType Name="FrontPage">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="header" Type="varchar(max)" />
+          <Property Name="textbody" Type="varchar(max)" />
+          <Property Name="contact" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="RemedyTable">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Remedy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Definition" Type="nvarchar(max)" />
+          <Property Name="Causes" Type="nvarchar(max)" />
+          <Property Name="Prevention" Type="nvarchar(max)" />
+          <Property Name="cattype" Type="int" />
+          <Property Name="date" Type="datetime" />
+        </EntityType>
+        <EntityType Name="symptomtable">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="symptom" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="remedy" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserAppoint">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="userid" Type="int" />
+          <Property Name="docid" Type="int" />
+          <Property Name="username" Type="varchar" MaxLength="50" />
+          <Property Name="docname" Type="varchar" MaxLength="50" />
+          <Property Name="dochos" Type="varchar" MaxLength="50" />
+          <Property Name="docaddress" Type="varchar" MaxLength="50" />
+          <Property Name="ailment" Type="varchar" MaxLength="50" />
+          <Property Name="dateofappoint" Type="date" />
+          <Property Name="docdate" Type="date" />
+          <Property Name="doctime" Type="varchar" MaxLength="50" />
+          <Property Name="timeofvisit" Type="varchar" MaxLength="50" />
+          <Property Name="date" Type="date" />
+          <Property Name="booktype" Type="varchar" MaxLength="50" />
+          <Property Name="approve" Type="int" />
+          <Property Name="treatapprove" Type="int" />
+          <Property Name="otherfee" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Userdata">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="surname" Type="nvarchar" MaxLength="50" />
+          <Property Name="firstname" Type="nvarchar" MaxLength="50" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" />
+          <Property Name="phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="username" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="regdate" Type="date" />
+          <Property Name="gender" Type="nvarchar" MaxLength="20" />
+          <Property Name="age" Type="int" />
+          <Property Name="dob" Type="nvarchar" MaxLength="10" />
+          <Property Name="maritalstatus" Type="nvarchar" MaxLength="20" />
+          <Property Name="address" Type="nvarchar" MaxLength="50" />
+          <Property Name="medicalhistry" Type="nvarchar" MaxLength="50" />
+          <Property Name="otherinfo" Type="nvarchar" MaxLength="50" />
+          <Property Name="role" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="UserMedHistory">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="docid" Type="int" />
+          <Property Name="userid" Type="int" />
+          <Property Name="appointid" Type="int" />
+          <Property Name="ailment" Type="varchar(max)" />
+          <Property Name="treatment_prescribe" Type="varchar(max)" />
+          <Property Name="test_done" Type="varchar(max)" />
+          <Property Name="testresult" Type="varchar(max)" />
+          <Property Name="recommendation" Type="varchar(max)" />
+          <Property Name="date" Type="date" />
+        </EntityType>
+        <EntityContainer Name="DoctorSearchModelStoreContainer">
+          <EntitySet Name="DocCategory" EntityType="Self.DocCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DocHospital" EntityType="Self.DocHospital" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DocRegistraton" EntityType="Self.DocRegistraton" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DocRemedies" EntityType="Self.DocRemedies" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FrontPage" EntityType="Self.FrontPage" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RemedyTable" EntityType="Self.RemedyTable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="symptomtable" EntityType="Self.symptomtable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserAppoint" EntityType="Self.UserAppoint" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Userdata" EntityType="Self.Userdata" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserMedHistory" EntityType="Self.UserMedHistory" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DoctorSearchModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="RemedyTable">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Remedy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Definition" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="date" Type="DateTime" Precision="3" />
+          <Property Name="cattype" Type="Int32" />
+          <Property Name="Causes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Prevention" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="symptomtable">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="symptom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="remedy" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Userdata">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="firstname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="regdate" Type="DateTime" Precision="0" />
+          <Property Name="gender" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="dob" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="maritalstatus" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="medicalhistry" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="otherinfo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="age" Type="Int32" />
+          <Property Name="role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="DoctorSearchEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="RemedyTables" EntityType="Self.RemedyTable" />
+          <EntitySet Name="symptomtables" EntityType="Self.symptomtable" />
+          <EntitySet Name="Userdatas" EntityType="Self.Userdata" />
+          <EntitySet Name="DocRegistratons" EntityType="DoctorSearchModel.DocRegistraton" />
+          <EntitySet Name="DocRemedies" EntityType="DoctorSearchModel.DocRemedy" />
+          <EntitySet Name="DocCategories" EntityType="DoctorSearchModel.DocCategory" />
+          <EntitySet Name="DocHospitals" EntityType="DoctorSearchModel.DocHospital" />
+          <EntitySet Name="UserAppoints" EntityType="DoctorSearchModel.UserAppoint" />
+          <EntitySet Name="UserMedHistories" EntityType="DoctorSearchModel.UserMedHistory" />
+          <EntitySet Name="FrontPages" EntityType="DoctorSearchModel.FrontPage" />
+        </EntityContainer>
+        <EntityType Name="DocRegistraton">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="docname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="docusername" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="docpassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="regdate" Type="DateTime" Precision="3" />
+          <Property Name="Specialty" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="hospital" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="OtherInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="uploadfile" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="hostype" Type="Int32" />
+          <Property Name="cattype" Type="Int32" />
+          <Property Name="approve" Type="Int32" />
+          <Property Name="address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="state" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="DocRemedy">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="remtype" Type="Int32" />
+          <Property Name="remdoctor" Type="Int32" />
+        </EntityType>
+        <EntityType Name="DocCategory">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CatName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="date" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="DocHospital">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Hospitalname" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Hospitaladdress" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="State" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Otherinfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="date" Type="DateTime" Precision="0" />
+          <Property Name="mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="UserAppoint">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="userid" Type="Int32" />
+          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="docname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="dochos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="docaddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ailment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="dateofappoint" Type="DateTime" Precision="0" />
+          <Property Name="timeofvisit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="date" Type="DateTime" Precision="0" />
+          <Property Name="docid" Type="Int32" />
+          <Property Name="booktype" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="approve" Type="Int32" />
+          <Property Name="docdate" Type="DateTime" Precision="0" />
+          <Property Name="doctime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="treatapprove" Type="Int32" />
+          <Property Name="otherfee" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="UserMedHistory">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="docid" Type="Int32" />
+          <Property Name="userid" Type="Int32" />
+          <Property Name="ailment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="treatment_prescribe" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="test_done" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="recommendation" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="date" Type="DateTime" Precision="0" />
+          <Property Name="testresult" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="appointid" Type="Int32" />
+        </EntityType>
+        <EntityType Name="FrontPage">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="header" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="textbody" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="contact" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DoctorSearchModelStoreContainer" CdmEntityContainer="DoctorSearchEntities">
+          <EntitySetMapping Name="RemedyTables">
+            <EntityTypeMapping TypeName="DoctorSearchModel.RemedyTable">
+              <MappingFragment StoreEntitySet="RemedyTable">
+                <ScalarProperty Name="Prevention" ColumnName="Prevention" />
+                <ScalarProperty Name="Causes" ColumnName="Causes" />
+                <ScalarProperty Name="cattype" ColumnName="cattype" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Remedy" ColumnName="Remedy" />
+                <ScalarProperty Name="Definition" ColumnName="Definition" />
+                <ScalarProperty Name="date" ColumnName="date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="symptomtables">
+            <EntityTypeMapping TypeName="DoctorSearchModel.symptomtable">
+              <MappingFragment StoreEntitySet="symptomtable">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="symptom" ColumnName="symptom" />
+                <ScalarProperty Name="remedy" ColumnName="remedy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Userdatas">
+            <EntityTypeMapping TypeName="DoctorSearchModel.Userdata">
+              <MappingFragment StoreEntitySet="Userdata">
+                <ScalarProperty Name="role" ColumnName="role" />
+                <ScalarProperty Name="age" ColumnName="age" />
+                <ScalarProperty Name="otherinfo" ColumnName="otherinfo" />
+                <ScalarProperty Name="medicalhistry" ColumnName="medicalhistry" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="maritalstatus" ColumnName="maritalstatus" />
+                <ScalarProperty Name="dob" ColumnName="dob" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="surname" ColumnName="surname" />
+                <ScalarProperty Name="firstname" ColumnName="firstname" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="regdate" ColumnName="regdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DocRegistratons">
+            <EntityTypeMapping TypeName="DoctorSearchModel.DocRegistraton">
+              <MappingFragment StoreEntitySet="DocRegistraton">
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="approve" ColumnName="approve" />
+                <ScalarProperty Name="cattype" ColumnName="cattype" />
+                <ScalarProperty Name="hostype" ColumnName="hostype" />
+                <ScalarProperty Name="uploadfile" ColumnName="uploadfile" />
+                <ScalarProperty Name="OtherInfo" ColumnName="OtherInfo" />
+                <ScalarProperty Name="hospital" ColumnName="hospital" />
+                <ScalarProperty Name="Specialty" ColumnName="Specialty" />
+                <ScalarProperty Name="regdate" ColumnName="regdate" />
+                <ScalarProperty Name="docpassword" ColumnName="docpassword" />
+                <ScalarProperty Name="docusername" ColumnName="docusername" />
+                <ScalarProperty Name="docname" ColumnName="docname" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DocRemedies">
+            <EntityTypeMapping TypeName="DoctorSearchModel.DocRemedy">
+              <MappingFragment StoreEntitySet="DocRemedies">
+                <ScalarProperty Name="remdoctor" ColumnName="remdoctor" />
+                <ScalarProperty Name="remtype" ColumnName="remtype" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DocCategories">
+            <EntityTypeMapping TypeName="DoctorSearchModel.DocCategory">
+              <MappingFragment StoreEntitySet="DocCategory">
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="CatName" ColumnName="CatName" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DocHospitals">
+            <EntityTypeMapping TypeName="DoctorSearchModel.DocHospital">
+              <MappingFragment StoreEntitySet="DocHospital">
+                <ScalarProperty Name="mobile" ColumnName="mobile" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="Otherinfo" ColumnName="Otherinfo" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Hospitaladdress" ColumnName="Hospitaladdress" />
+                <ScalarProperty Name="Hospitalname" ColumnName="Hospitalname" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserAppoints">
+            <EntityTypeMapping TypeName="DoctorSearchModel.UserAppoint">
+              <MappingFragment StoreEntitySet="UserAppoint">
+                <ScalarProperty Name="otherfee" ColumnName="otherfee" />
+                <ScalarProperty Name="treatapprove" ColumnName="treatapprove" />
+                <ScalarProperty Name="doctime" ColumnName="doctime" />
+                <ScalarProperty Name="docdate" ColumnName="docdate" />
+                <ScalarProperty Name="approve" ColumnName="approve" />
+                <ScalarProperty Name="booktype" ColumnName="booktype" />
+                <ScalarProperty Name="docid" ColumnName="docid" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="timeofvisit" ColumnName="timeofvisit" />
+                <ScalarProperty Name="dateofappoint" ColumnName="dateofappoint" />
+                <ScalarProperty Name="ailment" ColumnName="ailment" />
+                <ScalarProperty Name="docaddress" ColumnName="docaddress" />
+                <ScalarProperty Name="dochos" ColumnName="dochos" />
+                <ScalarProperty Name="docname" ColumnName="docname" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="userid" ColumnName="userid" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserMedHistories">
+            <EntityTypeMapping TypeName="DoctorSearchModel.UserMedHistory">
+              <MappingFragment StoreEntitySet="UserMedHistory">
+                <ScalarProperty Name="appointid" ColumnName="appointid" />
+                <ScalarProperty Name="testresult" ColumnName="testresult" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="recommendation" ColumnName="recommendation" />
+                <ScalarProperty Name="test_done" ColumnName="test_done" />
+                <ScalarProperty Name="treatment_prescribe" ColumnName="treatment_prescribe" />
+                <ScalarProperty Name="ailment" ColumnName="ailment" />
+                <ScalarProperty Name="userid" ColumnName="userid" />
+                <ScalarProperty Name="docid" ColumnName="docid" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FrontPages">
+            <EntityTypeMapping TypeName="DoctorSearchModel.FrontPage">
+              <MappingFragment StoreEntitySet="FrontPage">
+                <ScalarProperty Name="contact" ColumnName="contact" />
+                <ScalarProperty Name="textbody" ColumnName="textbody" />
+                <ScalarProperty Name="header" ColumnName="header" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

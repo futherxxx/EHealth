@@ -1,0 +1,95 @@
+﻿@using DocApp.Models;
+
+@model DocApp.Models.RemedyTable
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layoutadmin.cshtml";
+
+    List<DocCategory> cat = (List<DocCategory>)ViewBag.cat;
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>RemedyTable</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Remedy, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Remedy, new { @class = "form-control", required = "required" })
+                @Html.ValidationMessageFor(model => model.Remedy)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Definition, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <textarea class="form-control" rows="1" id="address" name="Definition" required></textarea>
+                @Html.ValidationMessageFor(model => model.Definition)
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.cattype, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <select class="form-control" id="state" name="cattype">
+
+                    @{
+                            if (cat.Count() != 0)
+                        {
+                            foreach (var item in cat)
+                            {
+
+                                <option value="@item.id">@item.CatName</option>
+
+                            }
+
+
+                        }
+
+
+                    }
+
+                </select>
+
+
+
+                @Html.ValidationMessageFor(model => model.cattype)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Causes, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <textarea class="form-control" rows="1" id="address" name="Causes" required></textarea>
+                @Html.ValidationMessageFor(model => model.Causes)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Prevention, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <textarea class="form-control" rows="1" id="address" name="Prevention" required></textarea>
+                @Html.ValidationMessageFor(model => model.Prevention)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

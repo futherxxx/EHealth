@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DoctorSearchModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DocCategory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CatName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="date" Type="date" />
+  </EntityType>
+  <EntityType Name="DocHospital">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Hospitalname" Type="varchar(max)" Nullable="false" />
+    <Property Name="Hospitaladdress" Type="varchar(max)" Nullable="false" />
+    <Property Name="State" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Otherinfo" Type="varchar(max)" />
+    <Property Name="mobile" Type="nvarchar" MaxLength="50" />
+    <Property Name="date" Type="date" />
+  </EntityType>
+  <EntityType Name="DocRegistraton">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="docname" Type="varchar" MaxLength="50" />
+    <Property Name="hospital" Type="varchar(max)" />
+    <Property Name="address" Type="varchar(max)" />
+    <Property Name="state" Type="varchar" MaxLength="50" />
+    <Property Name="docusername" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="docpassword" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="regdate" Type="datetime" />
+    <Property Name="Specialty" Type="varchar(max)" />
+    <Property Name="OtherInfo" Type="varchar(max)" />
+    <Property Name="uploadfile" Type="varchar(max)" />
+    <Property Name="hostype" Type="int" />
+    <Property Name="cattype" Type="int" />
+    <Property Name="approve" Type="int" />
+  </EntityType>
+  <EntityType Name="DocRemedies">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="remtype" Type="int" />
+    <Property Name="remdoctor" Type="int" />
+  </EntityType>
+  <EntityType Name="FrontPage">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="header" Type="varchar(max)" />
+    <Property Name="textbody" Type="varchar(max)" />
+    <Property Name="contact" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="RemedyTable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Remedy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Definition" Type="nvarchar(max)" />
+    <Property Name="Causes" Type="nvarchar(max)" />
+    <Property Name="Prevention" Type="nvarchar(max)" />
+    <Property Name="cattype" Type="int" />
+    <Property Name="date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="symptomtable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="symptom" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="remedy" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserAppoint">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userid" Type="int" />
+    <Property Name="docid" Type="int" />
+    <Property Name="username" Type="varchar" MaxLength="50" />
+    <Property Name="docname" Type="varchar" MaxLength="50" />
+    <Property Name="dochos" Type="varchar" MaxLength="50" />
+    <Property Name="docaddress" Type="varchar" MaxLength="50" />
+    <Property Name="ailment" Type="varchar" MaxLength="50" />
+    <Property Name="dateofappoint" Type="date" />
+    <Property Name="docdate" Type="date" />
+    <Property Name="doctime" Type="varchar" MaxLength="50" />
+    <Property Name="timeofvisit" Type="varchar" MaxLength="50" />
+    <Property Name="date" Type="date" />
+    <Property Name="booktype" Type="varchar" MaxLength="50" />
+    <Property Name="approve" Type="int" />
+    <Property Name="treatapprove" Type="int" />
+    <Property Name="otherfee" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Userdata">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="surname" Type="nvarchar" MaxLength="50" />
+    <Property Name="firstname" Type="nvarchar" MaxLength="50" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+    <Property Name="phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="username" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="regdate" Type="date" />
+    <Property Name="gender" Type="nvarchar" MaxLength="20" />
+    <Property Name="age" Type="int" />
+    <Property Name="dob" Type="nvarchar" MaxLength="10" />
+    <Property Name="maritalstatus" Type="nvarchar" MaxLength="20" />
+    <Property Name="address" Type="nvarchar" MaxLength="50" />
+    <Property Name="medicalhistry" Type="nvarchar" MaxLength="50" />
+    <Property Name="otherinfo" Type="nvarchar" MaxLength="50" />
+    <Property Name="role" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="UserMedHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="docid" Type="int" />
+    <Property Name="userid" Type="int" />
+    <Property Name="appointid" Type="int" />
+    <Property Name="ailment" Type="varchar(max)" />
+    <Property Name="treatment_prescribe" Type="varchar(max)" />
+    <Property Name="test_done" Type="varchar(max)" />
+    <Property Name="testresult" Type="varchar(max)" />
+    <Property Name="recommendation" Type="varchar(max)" />
+    <Property Name="date" Type="date" />
+  </EntityType>
+  <EntityContainer Name="DoctorSearchModelStoreContainer">
+    <EntitySet Name="DocCategory" EntityType="Self.DocCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DocHospital" EntityType="Self.DocHospital" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DocRegistraton" EntityType="Self.DocRegistraton" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DocRemedies" EntityType="Self.DocRemedies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FrontPage" EntityType="Self.FrontPage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RemedyTable" EntityType="Self.RemedyTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="symptomtable" EntityType="Self.symptomtable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserAppoint" EntityType="Self.UserAppoint" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Userdata" EntityType="Self.Userdata" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserMedHistory" EntityType="Self.UserMedHistory" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
